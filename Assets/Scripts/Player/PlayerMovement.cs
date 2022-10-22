@@ -1,56 +1,59 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+namespace RogueLike
 {
-    #region Variables
-
-    [SerializeField] private float _speed = 4f;
-    private Rigidbody2D _rb;
-    private bool _needToRotate;
-
-    #endregion
-
-
-    #region Unity lifecycle
-
-    private void Awake()
+    public class PlayerMovement : MonoBehaviour
     {
-        _rb = GetComponent<Rigidbody2D>();
-    }
+        #region Variables
 
-    private void Update()
-    {
-        Move();
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        if (horizontal > 0 && !_needToRotate)
+        [SerializeField] private float _speed = 4f;
+        private Rigidbody2D _rb;
+        private bool _needToRotate;
+
+        #endregion
+
+
+        #region Unity lifecycle
+
+        private void Awake()
         {
-            Rotate();
+            _rb = GetComponent<Rigidbody2D>();
         }
-        else if (horizontal < 0 && _needToRotate)
+
+        private void Update()
         {
-            Rotate();
+            Move();
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            if (horizontal > 0 && !_needToRotate)
+            {
+                Rotate();
+            }
+            else if (horizontal < 0 && _needToRotate)
+            {
+                Rotate();
+            }
         }
+
+        #endregion
+
+
+        #region Private methods
+
+        private void Move()
+        {
+            float vertical = Input.GetAxis("Vertical");
+            float horizontal = Input.GetAxis("Horizontal");
+            Vector2 direction = new Vector2(horizontal, vertical);
+            Vector3 moveDelta = direction * _speed;
+            _rb.velocity = moveDelta;
+        }
+
+        private void Rotate()
+        {
+            _needToRotate = !_needToRotate;
+            transform.Rotate(0f, 180f, 0f);
+        }
+
+        #endregion
     }
-
-    #endregion
-
-
-    #region Private methods
-
-    private void Move()
-    {
-        float vertical = Input.GetAxis("Vertical");
-        float horizontal = Input.GetAxis("Horizontal");
-        Vector2 direction = new Vector2(horizontal, vertical);
-        Vector3 moveDelta = direction * _speed;
-        _rb.velocity = moveDelta;
-    }
-
-    private void Rotate()
-    {
-        _needToRotate = !_needToRotate;
-        transform.Rotate(0f, 180f, 0f);
-    }
-
-    #endregion
 }
