@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace RogueLike
+namespace RogueLike.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
@@ -23,15 +23,7 @@ namespace RogueLike
         private void Update()
         {
             Move();
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            if (horizontal > 0 && !_needToRotate)
-            {
-                Rotate();
-            }
-            else if (horizontal < 0 && _needToRotate)
-            {
-                Rotate();
-            }
+            Rotate();
         }
 
         #endregion
@@ -43,15 +35,22 @@ namespace RogueLike
         {
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");
-            Vector2 direction = new Vector2(horizontal, vertical);
+            Vector2 direction = new(horizontal, vertical);
             Vector3 moveDelta = direction * _speed;
             _rb.velocity = moveDelta;
         }
 
         private void Rotate()
         {
-            _needToRotate = !_needToRotate;
-            transform.Rotate(0f, 180f, 0f);
+            Vector3 transformRight = transform.right;
+            transformRight.x = _rb.velocity.normalized.x;
+                
+            if (transformRight.x == 0)
+            {
+                return;
+            }
+            
+            transform.right = transformRight;
         }
 
         #endregion
