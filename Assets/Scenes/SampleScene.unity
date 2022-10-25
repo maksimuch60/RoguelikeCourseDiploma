@@ -306,9 +306,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-<<<<<<< HEAD
-  m_Constraints: 0
-=======
   m_Constraints: 4
 --- !u!1 &444926243
 GameObject:
@@ -394,7 +391,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> origin/master
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,12 +485,8 @@ GameObject:
   m_Component:
   - component: {fileID: 592416717}
   - component: {fileID: 592416718}
-<<<<<<< HEAD
-  m_Layer: 7
-=======
   - component: {fileID: 592416719}
   m_Layer: 0
->>>>>>> origin/master
   m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,9 +560,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
---- !u!1 &1288541263
-=======
 --- !u!95 &592416719
 Animator:
   serializedVersion: 4
@@ -592,7 +581,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1362456443
->>>>>>> origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -616,11 +604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288541263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.448, y: 0.05, z: 0}
-=======
   m_LocalPosition: {x: -1.11, y: -1.52, z: 0}
->>>>>>> origin/master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
