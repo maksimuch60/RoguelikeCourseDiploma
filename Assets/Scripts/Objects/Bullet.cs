@@ -22,7 +22,7 @@ namespace RogueLike
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _rb.velocity = (transform.up * _speed);
+            _rb.velocity = (transform.right * -1 * _speed);
             StartCoroutine(LifeTimeTimer());
         }
 
