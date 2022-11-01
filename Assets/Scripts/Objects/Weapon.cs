@@ -7,7 +7,7 @@ namespace RogueLike
         #region Variables
 
         [SerializeField] private float _offset;
-
+        
         private Camera _mainCamera; 
 
         #endregion
