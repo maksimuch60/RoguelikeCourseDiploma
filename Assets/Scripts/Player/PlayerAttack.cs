@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace RogueLike
@@ -5,7 +6,7 @@ namespace RogueLike
     public class PlayerAttack : MonoBehaviour
     {
         #region Variables
-
+        
         [SerializeField] private GameObject _bulletPrefab;
         [SerializeField] private Transform _bulletSpawnPositionTransform;
         [SerializeField] private float _fireDelay = 0.3f;
@@ -22,6 +23,7 @@ namespace RogueLike
         {
             _cachedTransform = transform;
         }
+        
 
         private void Update()
         {
@@ -37,6 +39,7 @@ namespace RogueLike
 
 
         #region Private methods
+        
 
         private void Attack()
         {
