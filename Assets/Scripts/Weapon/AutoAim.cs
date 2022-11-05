@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace RogueLike
 {
-    public class Weapon : MonoBehaviour
+    public class AutoAim : MonoBehaviour
     {
         #region Variables
 
         [SerializeField] private Transform _aimPosition;
         [SerializeField] private LayerMask _layerMask;
         [SerializeField] private float _radius;
-        [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private float _offset;
 
         private Camera _mainCamera;
@@ -24,15 +24,18 @@ namespace RogueLike
             _mainCamera = Camera.main;
         }
 
-        private void Start()
+        private void FixedUpdate()
         {
-            _triggerObserver.OnEntered += OnAimEntered;
-            _triggerObserver.OnExited += OnAimExited;
-        }
-
-        private void Update()
-        {
-            Rotate();
+            if (_aimPosition != null)
+            {
+                FollowEnemies();
+                Debug.Log($"Follow enemies");
+            }
+            else
+            {
+                Rotate();
+                Debug.Log("Rotate");
+            }
         }
 
         #endregion
@@ -40,14 +43,14 @@ namespace RogueLike
 
         #region Private methods
 
-        private void OnAimExited(Collider2D col)
+        private bool IsAimValid()
         {
-            Rotate();
+            return _aimPosition != null;
         }
 
-        private void OnAimEntered(Collider2D col)
+        public void SetAim(Transform aim)
         {
-            FollowEnemies();
+            _aimPosition = aim;
         }
 
         private void FollowEnemies()
@@ -55,7 +58,8 @@ namespace RogueLike
             Collider2D col = Physics2D.OverlapCircle(_aimPosition.position, _radius, _layerMask);
             if (col == null)
                 return;
-            transform.rotation = Quaternion.Euler(0f, 0f, _aimPosition.position.x);
+            Vector3 aimPos = _aimPosition.position;
+            transform.rotation = Quaternion.Euler(aimPos.x, aimPos.y, 0f);
         }
 
         private void Rotate()
