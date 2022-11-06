@@ -51,7 +51,9 @@ namespace RogueLike
 
         private void FollowEnemies()
         {
-            //transform.rotation = Quaternion.Euler(aimPos.x, aimPos.y, 0f);
+            Vector3 difference = _aimPosition.position - transform.position; 
+            float rotation = Mathf.Atan(difference.y / difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotation);
         }
 
         private void Rotate()

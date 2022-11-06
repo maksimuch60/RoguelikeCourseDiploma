@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 55827922086485647}
   - component: {fileID: 55827922086485645}
   - component: {fileID: 5374811725986852487}
-  - component: {fileID: 6754524987466170747}
   m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
@@ -130,25 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _aimPosition: {fileID: 0}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  _radius: 9
-  _offset: 0
---- !u!114 &6754524987466170747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55827922086485641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87147fbf60204cf0ad13933922b26499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _autoAim: {fileID: 5374811725986852487}
-  _aim: {fileID: 0}
 --- !u!1 &55827923548059216
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3677749835587391004}
   - component: {fileID: 5091603527721067454}
+  - component: {fileID: 1650081825}
   m_Layer: 8
   m_Name: AimZone
   m_TagString: Untagged
@@ -228,3 +209,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 9
+--- !u!114 &1650081825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842473010213427381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87147fbf60204cf0ad13933922b26499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoAim: {fileID: 5374811725986852487}
+  _aim: {fileID: 0}
