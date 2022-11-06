@@ -2,13 +2,13 @@
 
 namespace RogueLike
 {
-    public class RotateToAim : MonoBehaviour
+    public class SetAimTransform : MonoBehaviour
     {
         #region Variables
 
         [SerializeField] private AutoAim _autoAim;
 
-        [SerializeField]private Transform _aim;
+        [SerializeField] private Transform _aim;
 
         #endregion
 
@@ -29,6 +29,11 @@ namespace RogueLike
         {
             SetAim(null);
         }
+
+        #endregion
+
+
+        #region Private methods
 
         private void SetAim(Transform aim)
         {

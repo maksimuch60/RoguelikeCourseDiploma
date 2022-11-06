@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 55827922086485647}
   - component: {fileID: 55827922086485645}
   - component: {fileID: 5374811725986852487}
-  - component: {fileID: 3478316470113992693}
+  - component: {fileID: 6754524987466170747}
   m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
     m_Bits: 128
   _radius: 9
   _offset: 0
---- !u!114 &3478316470113992693
+--- !u!114 &6754524987466170747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _autoAim: {fileID: 5374811725986852487}
+  _aim: {fileID: 0}
 --- !u!1 &55827923548059216
 GameObject:
   m_ObjectHideFlags: 0

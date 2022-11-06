@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RogueLike
 {
@@ -8,9 +7,6 @@ namespace RogueLike
         #region Variables
 
         [SerializeField] private Transform _aimPosition;
-        [SerializeField] private LayerMask _layerMask;
-        [SerializeField] private float _radius;
-        [SerializeField] private float _offset;
 
         private Camera _mainCamera;
 
@@ -26,7 +22,7 @@ namespace RogueLike
 
         private void FixedUpdate()
         {
-            if (_aimPosition != null)
+            if (IsAimValid())
             {
                 FollowEnemies();
                 Debug.Log($"Follow enemies");
@@ -55,18 +51,14 @@ namespace RogueLike
 
         private void FollowEnemies()
         {
-            Collider2D col = Physics2D.OverlapCircle(_aimPosition.position, _radius, _layerMask);
-            if (col == null)
-                return;
-            Vector3 aimPos = _aimPosition.position;
-            transform.rotation = Quaternion.Euler(aimPos.x, aimPos.y, 0f);
+            //transform.rotation = Quaternion.Euler(aimPos.x, aimPos.y, 0f);
         }
 
         private void Rotate()
         {
             Vector3 difference = _mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             float rotation = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotation + _offset);
+            transform.rotation = Quaternion.Euler(0f, 0f, rotation);
         }
 
         #endregion
