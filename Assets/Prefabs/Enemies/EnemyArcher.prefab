@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 2068087453418708522}
   - component: {fileID: 3260887376650679715}
   - component: {fileID: 7679048534981926154}
+  - component: {fileID: 1578129417}
+  - component: {fileID: 4666992697212182499}
   m_Layer: 7
   m_Name: EnemyArcher
   m_TagString: Enemy
@@ -150,7 +152,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08927512, y: 0.11123228}
@@ -178,3 +180,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5a4b53b68940f1be339a846a8cea32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1578129417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735447049408960303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da51a4c730b46a5960e9253951f65a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startHp: 50
+  _maxHp: 50
+--- !u!114 &4666992697212182499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735447049408960303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d84fef8f1b4282a55eaec6921906d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyHp: {fileID: 1578129417}

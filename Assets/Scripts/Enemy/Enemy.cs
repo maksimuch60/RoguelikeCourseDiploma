@@ -5,6 +5,5 @@ namespace RogueLike
     public class Enemy : MonoBehaviour
 
     {
-
     }
 }

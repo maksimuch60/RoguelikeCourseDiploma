@@ -10,7 +10,7 @@ namespace RogueLike
 
         [SerializeField] private float _speed = 10f;
         [SerializeField] private float _lifeTime = 3f;
-        //[SerializeField] private int _damage = 3;
+        [SerializeField] private int _damage = 3;
 
         private Rigidbody2D _rb;
 
@@ -31,6 +31,14 @@ namespace RogueLike
             yield return new WaitForSeconds(_lifeTime);
 
             Destroy(gameObject);
+        }
+        
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Enemy"))
+            {
+                col.gameObject.GetComponent<EnemyHp>().ApplyDamage(_damage);
+            }
         }
 
         #endregion
