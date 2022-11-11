@@ -31,9 +31,9 @@ namespace RogueLike
             SetVelocity(Vector2.zero);
         }
 
-        public void SetTarget(Transform target)
+        public void SetTarget(Transform aim)
         {
-            _target = target;
+            _target = aim;
 
             if (_target == null)
                 SetVelocity(Vector2.zero);
