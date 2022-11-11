@@ -52,8 +52,15 @@ namespace RogueLike
 
         private void RotateToTarget()
         {
-            Vector3 direction = _target.position - _cachedTransform.position;
-            _cachedTransform.up = direction;
+            Vector3 transformRight = transform.right;
+            transformRight.x = _rb.velocity.normalized.x;
+                
+            if (transformRight.x == 0)
+            {
+                return;
+            }
+            
+            transform.right = transformRight;
         }
 
         private void SetVelocity(Vector2 velocity)
