@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7a17f0247520774d8305d8b6b276957
+guid: 2db6c6df665a64743a70c71e8c2b8433
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death-Sheet_0
+      name: Idle-Sheet(Resize)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 406a0b120b5c2f44e8fb8f4020823feb
-      internalID: -1071317008
+      spriteID: 1e432f01565b44445a829459fd8391b5
+      internalID: -661086538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Sheet_1
+      name: Idle-Sheet(Resize)_1
       rect:
         serializedVersion: 2
         x: 64
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d222d51d103e1f4692d266fc1e3fe70
-      internalID: -1010381905
+      spriteID: fa9fdb004c77a6541a815ed3467556c7
+      internalID: 393748470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Sheet_2
+      name: Idle-Sheet(Resize)_2
       rect:
         serializedVersion: 2
         x: 128
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dfe40b1fdd62bc4092811d554644855
-      internalID: -529093178
+      spriteID: 85bb35bc1fd07994da4b3bdb77dcd656
+      internalID: -1981708913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Sheet_3
+      name: Idle-Sheet(Resize)_3
       rect:
         serializedVersion: 2
         x: 192
@@ -206,50 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0578eab0f92aa8e4da7f3857b336edec
-      internalID: -1590301523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76265776d2012664a851338e2f85850e
-      internalID: -1541234698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efcb774c213ec3248b12ed6cf69e790c
-      internalID: -1454230717
+      spriteID: a68e47c1095626448bd800b579c4926a
+      internalID: -1831458595
       vertices: []
       indices: 
       edges: []
@@ -265,12 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Death-Sheet_5: -1454230717
-      Death-Sheet_3: -1590301523
-      Death-Sheet_2: -529093178
-      Death-Sheet_0: -1071317008
-      Death-Sheet_1: -1010381905
-      Death-Sheet_4: -1541234698
+      Idle-Sheet(Resize)_2: -1981708913
+      Idle-Sheet(Resize)_3: -1831458595
+      Idle-Sheet(Resize)_1: 393748470
+      Idle-Sheet(Resize)_0: -661086538
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
