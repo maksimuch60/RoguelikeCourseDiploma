@@ -44,13 +44,13 @@ namespace RogueLike
             return _target != null;
         }
 
-        private void MoveToTarget()
+        public void MoveToTarget()
         {
             Vector3 direction = (_target.position - _cachedTransform.position).normalized;
             SetVelocity(direction * _speed);
         }
 
-        private void RotateToTarget()
+        public void RotateToTarget()
         {
             Vector3 transformRight = transform.right;
             transformRight.x = _rb.velocity.normalized.x;

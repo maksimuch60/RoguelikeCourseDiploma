@@ -9,7 +9,7 @@ namespace RogueLike
         #region Variables
 
         [SerializeField] private float _speed = 10f;
-        [SerializeField] private float _lifeTime = 3f;
+        [SerializeField] private float _lifeTime = 0.3f;
         [SerializeField] private int _damage = 3;
 
         private Rigidbody2D _rb;
