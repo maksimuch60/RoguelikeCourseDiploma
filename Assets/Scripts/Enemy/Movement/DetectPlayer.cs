@@ -1,5 +1,4 @@
-﻿using RogueLike.Player;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RogueLike
 {
@@ -9,26 +8,25 @@ namespace RogueLike
 
         [SerializeField] private EnemyMovement _movement;
 
-        [SerializeField] private Transform _target;
-
         #endregion
 
 
         #region Unity lifecycle
 
-        private void Start()
-        {
-            _target  = FindObjectOfType<PlayerMovement>().transform;
-        }
-
         private void OnTriggerEnter2D(Collider2D col)
         {
-            SetTarget(_target);
+            if (col.CompareTag("Player"))
+            {
+                SetTarget(col.gameObject.transform);
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            SetTarget(null);
+            if (other.CompareTag("Player"))
+            {
+                SetTarget(null);
+            }
         }
 
         #endregion
@@ -38,6 +36,5 @@ namespace RogueLike
         {
             _movement.SetTarget(aim);
         }
-
     }
 }
