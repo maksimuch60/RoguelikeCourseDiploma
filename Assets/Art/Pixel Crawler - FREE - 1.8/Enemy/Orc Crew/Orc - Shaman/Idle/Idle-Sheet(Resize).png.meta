@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc1acb413fcf7494895f278f7124d141
+guid: c80ac7e52f030f242a59d511ac7a646f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -129,10 +129,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death-Sheet_0
+      name: Idle-Sheet(Resize)_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -143,17 +143,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce546213a211c6d48b0779ad0d0e02c6
-      internalID: 1557165310
+      spriteID: 87ae72499f476a342b63ffce89dd9b1e
+      internalID: -1899781941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Sheet_1
+      name: Idle-Sheet(Resize)_1
       rect:
         serializedVersion: 2
-        x: 112
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -164,17 +164,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8c5eb859a7a4454a88307862bcf274d
-      internalID: -915954266
+      spriteID: 7d1beb1715cc3164fa106095e41a0e2e
+      internalID: 665476983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Sheet_2
+      name: Idle-Sheet(Resize)_2
       rect:
         serializedVersion: 2
-        x: 208
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -185,17 +185,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4597abbf1fc3bf4fa21740a0bd169b5
-      internalID: 628027223
+      spriteID: 8b1e33b5ad69f8e46b77cb7bd0ccc0eb
+      internalID: -899034575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Sheet_3
+      name: Idle-Sheet(Resize)_3
       rect:
         serializedVersion: 2
-        x: 304
+        x: 192
         y: 0
         width: 64
         height: 64
@@ -206,50 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee3848804103a5e41814c4ac516f0776
-      internalID: -474168246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 614ad6a3a032d1c4c8fdfaa82a54a343
-      internalID: 1933701194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 882cb12108255954b833b4718051b792
-      internalID: 196560751
+      spriteID: bdc05ff4486b6294f968b43763517d00
+      internalID: 412155510
       vertices: []
       indices: 
       edges: []
@@ -265,12 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Death-Sheet_5: 196560751
-      Death-Sheet_3: -474168246
-      Death-Sheet_2: 628027223
-      Death-Sheet_0: 1557165310
-      Death-Sheet_1: -915954266
-      Death-Sheet_4: 1933701194
+      Idle-Sheet(Resize)_2: -899034575
+      Idle-Sheet(Resize)_3: 412155510
+      Idle-Sheet(Resize)_1: 665476983
+      Idle-Sheet(Resize)_0: -1899781941
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
