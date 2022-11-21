@@ -3,12 +3,12 @@
 namespace RogueLike
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class EnemyMovement : MonoBehaviour
+    public abstract class EnemyMovement : MonoBehaviour
     {
-        [SerializeField] private float _speed = 4;
-        [SerializeField] private Transform _target;
-        
-        private Transform _cachedTransform;
+        [SerializeField] protected float _speed = 4;
+        [SerializeField] protected Transform _target;
+
+        protected Transform _cachedTransform;
         private Rigidbody2D _rb;
 
         private void Awake()
@@ -39,31 +39,25 @@ namespace RogueLike
                 SetVelocity(Vector2.zero);
         }
 
-        private bool IsTargetValid()
-        {
-            return _target != null;
-        }
+        internal abstract bool IsTargetValid();
+       
 
-        public void MoveToTarget()
-        {
-            Vector3 direction = (_target.position - _cachedTransform.position).normalized;
-            SetVelocity(direction * _speed);
-        }
+        protected abstract void MoveToTarget();
 
-        public void RotateToTarget()
+        private void RotateToTarget()
         {
             Vector3 transformRight = transform.right;
             transformRight.x = _rb.velocity.normalized.x;
-                
+
             if (transformRight.x == 0)
             {
                 return;
             }
-            
+
             transform.right = transformRight;
         }
 
-        private void SetVelocity(Vector2 velocity)
+        protected void SetVelocity(Vector2 velocity)
         {
             _rb.velocity = velocity;
             //SetAnimationSpeed(velocity.magnitude);
