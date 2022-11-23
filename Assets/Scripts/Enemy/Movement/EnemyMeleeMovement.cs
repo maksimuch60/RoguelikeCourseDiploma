@@ -2,7 +2,7 @@
 
 namespace RogueLike
 {
-    public class EnemyMeleeAttack : EnemyMovement
+    public class EnemyMeleeMovement : EnemyMovement
     {
         internal override bool IsTargetValid()
         {

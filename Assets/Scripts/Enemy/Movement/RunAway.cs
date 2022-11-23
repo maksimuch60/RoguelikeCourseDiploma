@@ -4,9 +4,9 @@ namespace RogueLike
 {
     public class RunAway : EnemyMovement
     {
-        internal override bool IsTargetValid()
+        internal override bool IsTargetValid()  
         {
-            return _target == null;
+            return _target != null;
         }
 
         protected override void MoveToTarget()

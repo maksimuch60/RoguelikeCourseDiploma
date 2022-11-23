@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1233653146994486252}
   - component: {fileID: 1233653146994486163}
-  - component: {fileID: 4609167571323813735}
   - component: {fileID: 4362163479293325025}
   - component: {fileID: 4280747575462475693}
   m_Layer: 10
@@ -87,27 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4609167571323813735
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233653146994486253}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &4362163479293325025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,9 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad7c439438e41e6a600c2708441e486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  _lifeTime: 0
-  Damage: 3
+  _speed: 5
+  _damage: 7
 --- !u!61 &4280747575462475693
 BoxCollider2D:
   m_ObjectHideFlags: 0
