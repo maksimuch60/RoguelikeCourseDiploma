@@ -9,7 +9,7 @@ namespace RogueLike
             return _target != null;
         }
 
-        protected override void MoveToTarget()
+        protected override void MoveFromTarget()
         {
             Vector3 direction = (_target.position - _cachedTransform.position).normalized;
             SetVelocity(direction * _speed);
