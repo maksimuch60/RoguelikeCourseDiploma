@@ -2,8 +2,7 @@
 
 namespace RogueLike
 {
-    public class Enemy : MonoBehaviour
-
+    public class EnemyAttack : MonoBehaviour
     {
         
     }

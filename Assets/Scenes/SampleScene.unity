@@ -207,35 +207,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &708740040 stripped
+--- !u!114 &1018278739 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1089535552, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2057576801, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
   m_PrefabInstance: {fileID: 1101755117099750383}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5b97fa6d0a4790af3d2f30a25cd6dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 04d30ae522b84579a2bc437468f0d3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2074672086 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3358359702643030537, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
-  m_PrefabInstance: {fileID: 1101755117099750383}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2074672089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074672086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7edf73673234fb79b82c9ce32b284cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movement: {fileID: 708740040}
 --- !u!1001 &1101755117099750383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,6 +225,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 257954255, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: _enemyAttack
+      value: 
+      objectReference: {fileID: 1018278739}
+    - target: {fileID: 1581174066, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057576801, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_Name
       value: EnemyArcher

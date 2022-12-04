@@ -17,7 +17,7 @@ namespace RogueLike
 
         private void Start()
         {
-            _aim = FindObjectOfType<Enemy>().transform;
+            _aim = FindObjectOfType<EnemyHp>().transform;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
