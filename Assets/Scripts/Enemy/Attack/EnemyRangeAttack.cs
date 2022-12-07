@@ -26,7 +26,7 @@ namespace RogueLike
 
         private void Attack()
         {
-            _timer = _fireDelay;
+            Timer = _fireDelay;
             Instantiate(_enemyBulletPrefab, transform.position, RotateToPlayer(_player.position));
             Debug.Log("Shoot");
         }
