@@ -2,7 +2,7 @@
 
 namespace RogueLike
 {
-    public interface IHealth
+    public interface IDamageble
     {
         event Action<int> OnChanged;
 
@@ -10,6 +10,5 @@ namespace RogueLike
         int MaxHp { get; }
 
         void ApplyDamage(int damage);
-        //void ApplyHeal(int heal);
     }
 }

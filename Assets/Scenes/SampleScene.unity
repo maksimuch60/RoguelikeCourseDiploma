@@ -958,10 +958,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyArcher
       objectReference: {fileID: 0}
-    - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8967444361591388031, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1072,10 +1068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4756258230519857978, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
-      propertyPath: _damage
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7832228698562643708, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
       propertyPath: m_RootOrder
       value: 4

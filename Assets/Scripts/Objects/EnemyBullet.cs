@@ -11,7 +11,5 @@ namespace RogueLike
                 col.gameObject.GetComponentInParent<PlayerHp>().ApplyDamage(Damage);
             }
         }
-
-
     }
 }

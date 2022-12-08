@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace RogueLike
 {
-    public class EnemyHp : MonoBehaviour, IHealth
+    public class EnemyHp : MonoBehaviour, IDamageble
     {
         [SerializeField] private int _startHp;
         [SerializeField] private int _maxHp;
