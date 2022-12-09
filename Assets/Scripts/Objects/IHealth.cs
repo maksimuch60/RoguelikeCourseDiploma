@@ -8,8 +8,5 @@ namespace RogueLike
 
         int CurrentHp { get; }
         int MaxHp { get; }
-
-        void ApplyDamage(int damage);
-        //void ApplyHeal(int heal);
     }
 }

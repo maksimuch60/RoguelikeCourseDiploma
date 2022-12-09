@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - EnemyShield
+  - EnemyAttackZone
+  - EnemyAgroTrigger
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - EnemyBullet
   - EnemyAgroTrigger
   - EnemyAimZone
-  - 
+  - EnemyAttackZone
   - 
   - 
   - 
