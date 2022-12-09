@@ -9,8 +9,8 @@ namespace RogueLike
             if (col.gameObject.CompareTag("Enemy"))
             {
                 col.gameObject.GetComponentInParent<EnemyHp>().ApplyDamage(Damage);
-                Destroy(gameObject);
                 Debug.Log("Enemy Hp -- ");
+                Destroy(gameObject);
             }
             else if (col.gameObject.CompareTag("EnemyShield"))
             {
