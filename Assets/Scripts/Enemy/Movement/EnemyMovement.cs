@@ -22,7 +22,7 @@ namespace RogueLike
             if (!IsTargetValid())
                 return;
 
-            MoveFromTarget();
+            MovementRelativeToThePlayer();
             RotateToTarget();
         }
 
@@ -42,7 +42,7 @@ namespace RogueLike
         internal abstract bool IsTargetValid();
        
 
-        protected abstract void MoveFromTarget();
+        protected abstract void MovementRelativeToThePlayer();
 
         private void RotateToTarget()
         {

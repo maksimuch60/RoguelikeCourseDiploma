@@ -3,30 +3,24 @@ using UnityEngine;
 
 namespace RogueLike
 {
-    public class RunAway : EnemyMovement
+    public class ShamanRunAwayBehaviour : EnemyMovement
     {
-        [SerializeField] private EnemyRangeAttack _enemyAttack;
-
         private void Update()
         {
             if (IsTargetValid())
             {
-                MoveFromTarget();
-            }
-            else
-            {
-                _enemyAttack.enabled = true; 
+                Debug.Log("Instantiate one of three complex attacks");
+                MovementRelativeToThePlayer();
             }
         }
 
-        internal override bool IsTargetValid()  
+        internal override bool IsTargetValid()
         {
             return _target != null;
         }
 
-        protected override void MoveFromTarget()
+        protected override void MovementRelativeToThePlayer()
         {
-            _enemyAttack.enabled = false; 
             Vector3 direction = (_target.position - _cachedTransform.position).normalized;
             SetVelocity(-direction * _speed);
         }
