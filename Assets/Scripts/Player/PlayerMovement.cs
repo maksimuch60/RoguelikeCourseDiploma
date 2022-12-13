@@ -6,7 +6,7 @@ namespace RogueLike.Player
     {
         #region Variables
 
-        [SerializeField] private float _speed = 4f;
+        [SerializeField] public float _speed = 4f;
         private Rigidbody2D _rb;
         private bool _needToRotate;
 
