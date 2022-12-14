@@ -5,10 +5,14 @@ namespace RogueLike
     public class ComplexAttack : EnemyAttack
     {
         [SerializeField] private ComplexAttackInfo[] _attacksInfo;
-
-        private void ShootSpecialProjectile()
+        public void ShootSpecialProjectile()
         {
-            //TODO: Randomize attack
+           _attacksInfo[0].Attack.enabled = true;
+        }
+
+        public void StopShoot()
+        {
+            _attacksInfo[0].Attack.enabled = false; 
         }
     }
 }

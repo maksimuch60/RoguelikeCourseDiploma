@@ -8,7 +8,7 @@ namespace RogueLike
     {
         [SerializeField] private PlayerMovement _playerMovement;
 
-        [SerializeField] private float _defaultSpeed;
+        [SerializeField] private float _defaultSpeed = 4;
 
         [SerializeField] private float _freezeSpeed;
 
@@ -16,16 +16,15 @@ namespace RogueLike
 
         private void Start()
         {
-            _defaultSpeed += _playerMovement._speed;
             StartCoroutine(Freeze()); 
         }
 
         IEnumerator Freeze()
         {
-            _defaultSpeed += _freezeSpeed;
+            _playerMovement.Speed -= _freezeSpeed;
             Debug.Log($"Default speed is {_defaultSpeed}");
             yield return new WaitForSeconds(_duration);
-            _defaultSpeed += _playerMovement._speed; 
+            _playerMovement.Speed = _defaultSpeed;  
             Debug.Log($"Default speed AFTER FREEZE is {_defaultSpeed}");
             
         }

@@ -5,6 +5,6 @@ namespace RogueLike
     [Serializable]
     public class ComplexAttackInfo
     {
-        public EnemyAttack _attack; 
+        public EnemyAttack Attack; 
     }
 }

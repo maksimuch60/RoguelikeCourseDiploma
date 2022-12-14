@@ -4,12 +4,18 @@ namespace RogueLike
 {
     public class ShamanRunAwayBehaviour : EnemyMovement
     {
+        [SerializeField] private ComplexAttack _complexAttack; 
         private void Update()
         {
             if (IsTargetValid())
             {
+                _complexAttack.ShootSpecialProjectile();
                 Debug.Log("Instantiate one of three complex attacks");
                 MovementRelativeToThePlayer();
+            }
+            else
+            {
+                _complexAttack.StopShoot();
             }
         }
 

@@ -273,6 +273,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5543099476381220106}
   - component: {fileID: 605737873}
+  - component: {fileID: 605737875}
+  - component: {fileID: 605737876}
   m_Layer: 7
   m_Name: Weapon
   m_TagString: Enemy
@@ -311,6 +313,36 @@ MonoBehaviour:
   _fireDelay: 1.2
   _enemyBulletPrefab: {fileID: 2826451815554099487, guid: eca0a19999a16b14a86e047cb0a61955, type: 3}
   _player: {fileID: 0}
+--- !u!114 &605737875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215685504463838817}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2653f52a9a7460285deca311043ad0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovement: {fileID: 0}
+  _defaultSpeed: 0
+  _freezeSpeed: -8
+  _duration: 5
+--- !u!114 &605737876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215685504463838817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff575aad425e432e8d8a78aa5c78b6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attacksInfo:
+  - _attack: {fileID: 605737875}
 --- !u!1 &5888944313748587965
 GameObject:
   m_ObjectHideFlags: 0

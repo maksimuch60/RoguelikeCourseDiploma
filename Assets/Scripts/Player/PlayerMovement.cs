@@ -6,7 +6,7 @@ namespace RogueLike.Player
     {
         #region Variables
 
-        [SerializeField] public float _speed = 4f;
+        [SerializeField] public float Speed = 4f;
         private Rigidbody2D _rb;
         private bool _needToRotate;
 
@@ -36,7 +36,7 @@ namespace RogueLike.Player
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");
             Vector2 direction = new(horizontal, vertical);
-            Vector3 moveDelta = direction * _speed;
+            Vector3 moveDelta = direction * Speed;
             _rb.velocity = moveDelta;
         }
 
