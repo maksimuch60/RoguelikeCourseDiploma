@@ -9,6 +9,7 @@ namespace RogueLike.Player
         [SerializeField] public float Speed = 4f;
         private Rigidbody2D _rb;
         private bool _needToRotate;
+        private float _minSpeed = 1f; 
 
         #endregion
 
@@ -22,6 +23,7 @@ namespace RogueLike.Player
 
         private void Update()
         {
+            SetMinSpeed();
             Move();
             Rotate();
         }
@@ -53,6 +55,13 @@ namespace RogueLike.Player
             transform.right = transformRight;
         }
 
+        private void SetMinSpeed()
+        {
+            if (Speed < _minSpeed)
+            {
+                Speed = _minSpeed; 
+            }
+        }
         #endregion
     }
 }

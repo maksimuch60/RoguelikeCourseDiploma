@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e35be3175a26dc45a1ca765080da67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 9
+  Speed: 10
 --- !u!114 &707851238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +260,22 @@ PrefabInstance:
     - target: {fileID: 55827922086485641, guid: e88235d18de09474db846fbd7e6e7b30, type: 3}
       propertyPath: m_Name
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 55827922086485641, guid: e88235d18de09474db846fbd7e6e7b30, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 55827922086485641, guid: e88235d18de09474db846fbd7e6e7b30, type: 3}
+      propertyPath: m_TagString
+      value: PlayerWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 55827923548059216, guid: e88235d18de09474db846fbd7e6e7b30, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842473010213427381, guid: e88235d18de09474db846fbd7e6e7b30, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6754524987466170747, guid: e88235d18de09474db846fbd7e6e7b30, type: 3}

@@ -7,6 +7,8 @@ namespace RogueLike
         #region Variables
 
         [SerializeField] private EnemyHp _enemyHp;
+        [SerializeField] private EnemyMovement _enemyMovement;
+        [SerializeField] private EnemyAttack _enemyAttack; 
 
         #endregion
 
@@ -35,7 +37,9 @@ namespace RogueLike
             if (IsDead || hp > 0)
                 return;
             Debug.Log($"Enemy is dead: {IsDead}");
-            //TODO: Off all enemy scripts and add enemy death animation;
+            _enemyAttack.enabled = false;
+            _enemyHp.enabled = false;
+            _enemyMovement.enabled = false;
         }
 
         #endregion

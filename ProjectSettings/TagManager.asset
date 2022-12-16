@@ -9,6 +9,7 @@ TagManager:
   - EnemyShield
   - EnemyAttackZone
   - EnemyAgroTrigger
+  - PlayerWeapon
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - EnemyAgroTrigger
   - EnemyAimZone
   - EnemyAttackZone
-  - 
+  - PlayerWeapone
   - 
   - 
   - 

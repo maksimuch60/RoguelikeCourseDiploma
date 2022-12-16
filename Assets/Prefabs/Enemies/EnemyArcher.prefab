@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 2068087453418708522}
   - component: {fileID: 257954257}
   - component: {fileID: 2287159838325095634}
+  - component: {fileID: 5836539140788226748}
   m_Layer: 7
   m_Name: EnemyArcher
   m_TagString: Enemy
@@ -510,6 +511,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4
   _target: {fileID: 0}
+  _enemyAttack: {fileID: 2057576801}
+--- !u!114 &5836539140788226748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735447049408960303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d84fef8f1b4282a55eaec6921906d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyHp: {fileID: 257954257}
+  _enemyMovement: {fileID: 2287159838325095634}
   _enemyAttack: {fileID: 2057576801}
 --- !u!1 &8101483743302102489
 GameObject:

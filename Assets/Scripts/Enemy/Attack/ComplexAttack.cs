@@ -7,12 +7,12 @@ namespace RogueLike
         [SerializeField] private ComplexAttackInfo[] _attacksInfo;
         public void ShootSpecialProjectile()
         {
-           _attacksInfo[0].Attack.enabled = true;
+           _attacksInfo[0].SpecialEffectAttack.enabled = true;
         }
 
         public void StopShoot()
         {
-            _attacksInfo[0].Attack.enabled = false; 
+            _attacksInfo[0].SpecialEffectAttack.enabled = false; 
         }
     }
 }
