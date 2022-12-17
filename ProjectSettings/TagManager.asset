@@ -25,8 +25,8 @@ TagManager:
   - EnemyAgroTrigger
   - EnemyAimZone
   - EnemyAttackZone
-  - PlayerWeapone
-  - 
+  - PlayerWeapon
+  - EnemyShield
   - 
   - 
   - 

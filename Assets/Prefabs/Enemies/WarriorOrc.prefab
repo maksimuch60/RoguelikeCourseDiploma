@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 546088248831168464}
   - component: {fileID: 6034506929171088909}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Shield
   m_TagString: EnemyShield
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.003104359, y: -0.5111691}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 7832228699041829483}
   - component: {fileID: 7832228699041829482}
   - component: {fileID: 7634825069816612594}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: ShieldModel
   m_TagString: EnemyShield
   m_Icon: {fileID: 0}

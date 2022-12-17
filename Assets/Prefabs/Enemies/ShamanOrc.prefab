@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attacksInfo:
-  - Attack: {fileID: 605737875}
+  - SpecialEffectAttack: {fileID: 605737875}
 --- !u!1 &5888944313748587965
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8205577749919999283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,7 +743,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08044666, y: -0.10726231}

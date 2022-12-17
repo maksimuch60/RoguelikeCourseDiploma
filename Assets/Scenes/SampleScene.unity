@@ -942,17 +942,6 @@ Transform:
   m_Father: {fileID: 798224520}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2085266365 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 605737875, guid: 5588a20db9098f94696e5900fec62121, type: 3}
-  m_PrefabInstance: {fileID: 8296592601023786992}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2653f52a9a7460285deca311043ad0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2088877467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4783201294106756914, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
@@ -979,10 +968,6 @@ PrefabInstance:
     - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_Name
       value: EnemyArcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8967444361591388031, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_RootOrder
@@ -1040,10 +1025,6 @@ PrefabInstance:
     - target: {fileID: 4783201294106756877, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783201294106756912, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4783201294106756914, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
       propertyPath: m_RootOrder
@@ -1146,10 +1127,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarriorOrc
       objectReference: {fileID: 0}
-    - target: {fileID: 7832228698562643709, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
 --- !u!1001 &8296592601023786992
@@ -1167,14 +1144,6 @@ PrefabInstance:
       propertyPath: _playerMovement
       value: 
       objectReference: {fileID: 2088877470}
-    - target: {fileID: 605737876, guid: 5588a20db9098f94696e5900fec62121, type: 3}
-      propertyPath: _attacksInfo.Array.data[0].SpecialEffectAttack
-      value: 
-      objectReference: {fileID: 2085266365}
-    - target: {fileID: 3145225151531651001, guid: 5588a20db9098f94696e5900fec62121, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8296592599847588908, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: m_Name
       value: ShamanOrc

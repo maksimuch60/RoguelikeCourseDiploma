@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.VisualScripting;
+using UnityEngine;
 
 namespace RogueLike
 {
@@ -9,19 +11,21 @@ namespace RogueLike
         [SerializeField] private AutoAim _autoAim;
 
         [SerializeField] private Transform _aim;
-
+        
         #endregion
 
 
         #region Unity lifecycle
+        
 
-        private void Start()
-        {
-            _aim = FindObjectOfType<EnemyHp>().transform;
-        }
+        #endregion
+
+
+        #region Private methods
 
         private void OnTriggerEnter2D(Collider2D col)
         {
+            _aim = col.gameObject.transform;
             SetAim(_aim);
         }
 
@@ -29,11 +33,6 @@ namespace RogueLike
         {
             SetAim(null);
         }
-
-        #endregion
-
-
-        #region Private methods
 
         private void SetAim(Transform aim)
         {
