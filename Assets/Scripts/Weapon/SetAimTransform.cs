@@ -11,12 +11,6 @@ namespace RogueLike
         [SerializeField] private AutoAim _autoAim;
 
         [SerializeField] private Transform _aim;
-        
-        #endregion
-
-
-        #region Unity lifecycle
-        
 
         #endregion
 
