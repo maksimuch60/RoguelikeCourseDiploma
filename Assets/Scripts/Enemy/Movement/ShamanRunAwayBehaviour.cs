@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace RogueLike
@@ -20,7 +19,9 @@ namespace RogueLike
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            StartCoroutine(WaitBeforeClose());
             _complexAttack.StopShoot();
+            StopCoroutine(WaitBeforeClose());
         }
 
         internal override bool IsTargetValid()
@@ -32,6 +33,11 @@ namespace RogueLike
         {
             Vector3 direction = (_target.position - _cachedTransform.position).normalized;
             SetVelocity(-direction * _speed);
+        }
+
+        IEnumerator WaitBeforeClose()
+        {
+            yield return new WaitForSeconds(10); 
         }
     }
 }

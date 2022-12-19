@@ -8,10 +8,11 @@ namespace RogueLike
 
         private Camera _camera;
 
-        private Transform _cachedTransform; 
+        private Transform _cachedTransform;
+
         private void Start()
         {
-            _cachedTransform = transform; 
+            _cachedTransform = transform;
             _camera = FindObjectOfType<Camera>();
         }
 
@@ -19,8 +20,7 @@ namespace RogueLike
         {
             Vector3 followPosition = _camera.WorldToScreenPoint(_followPlayer.position);
             followPosition.z = _cachedTransform.position.z;
-            _cachedTransform.position = followPosition; 
-
+            _cachedTransform.position = followPosition;
         }
     }
 }

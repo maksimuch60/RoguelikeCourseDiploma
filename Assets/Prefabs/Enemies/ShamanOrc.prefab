@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.60451484, y: -0.0888505}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 9
 --- !u!114 &5536156384635211794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 605737873}
   - component: {fileID: 605737875}
   - component: {fileID: 6350129899065079597}
+  - component: {fileID: 7806704379056209264}
   - component: {fileID: 605737876}
   m_Layer: 7
   m_Name: Weapon
@@ -343,6 +344,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHp: {fileID: 0}
+--- !u!114 &7806704379056209264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215685504463838817}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed79c9578e104c54aab628cbcd18bf81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blindZone: {fileID: 0}
 --- !u!114 &605737876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +372,7 @@ MonoBehaviour:
   _attacksInfo:
   - SpecialEffectAttack: {fileID: 605737875}
   - SpecialEffectAttack: {fileID: 6350129899065079597}
+  - SpecialEffectAttack: {fileID: 7806704379056209264}
 --- !u!1 &5888944313748587965
 GameObject:
   m_ObjectHideFlags: 0
