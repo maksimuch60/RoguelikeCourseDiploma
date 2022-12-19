@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1159370550470732325}
+  - component: {fileID: 6154138338191611709}
   m_Layer: 0
   m_Name: Room11
-  m_TagString: Untagged
+  m_TagString: OneDoorRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,6 +36,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6154138338191611709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50128728670447087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed8194fcac4dc0befc98fd26fbf960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPoints:
+  - _spawnPointTransform: {fileID: 3704234681547229940}
+    _connectedRoom: {fileID: 0}
+  _roomTier: 3
+  _startSpawnTransform: {fileID: 0}
+  _endSpawnTransform: {fileID: 0}
 --- !u!1 &1806768381872268578
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +338,7 @@ GameObject:
   - component: {fileID: 3704234681547229940}
   m_Layer: 0
   m_Name: TopDot
-  m_TagString: Untagged
+  m_TagString: TopDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

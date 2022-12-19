@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1895640431224654408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1895640431224654410}
+  - component: {fileID: 1895640431224654409}
+  m_Layer: 0
+  m_Name: RoomGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1895640431224654410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895640431224654408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895640431224654409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895640431224654408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d7d247b2a54a2283d43ce1f8d8c77b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roomsWithLeftDoor:
+  - {fileID: 8223944664078590868, guid: a3e6fe195bfde7d418c5cee901fac279, type: 3}
+  - {fileID: 1234588202579734791, guid: a261c4e9f0bbfb842be33596cab63496, type: 3}
+  - {fileID: 1298450042870540407, guid: 796d4dceed57f7c44beadb07ccc3a2b7, type: 3}
+  - {fileID: 3532077018142248719, guid: 08dbbc736128de44490a3cb0df3055d5, type: 3}
+  - {fileID: 5110648830051825145, guid: b95b55898cd2de344b090cb3b26b6bee, type: 3}
+  - {fileID: 7531154302778820891, guid: cec073309a2193e4cb6a62da8a34fcc0, type: 3}
+  - {fileID: 8359711492338534123, guid: f176e4c551678154d927e487139d69cd, type: 3}
+  - {fileID: 9041901236544000216, guid: c04446c72d7df9344936b3951fcd6c03, type: 3}
+  _roomsWithRightDoor:
+  - {fileID: 8223944664078590868, guid: a3e6fe195bfde7d418c5cee901fac279, type: 3}
+  - {fileID: 3316172992156085464, guid: b576916702c5bc84bbee9185fa9e102b, type: 3}
+  - {fileID: 1234588202579734791, guid: a261c4e9f0bbfb842be33596cab63496, type: 3}
+  - {fileID: 3532077018142248719, guid: 08dbbc736128de44490a3cb0df3055d5, type: 3}
+  - {fileID: 275557486273250979, guid: 6bb8df2859c4677449d299140d41fb28, type: 3}
+  - {fileID: 3908124291854489395, guid: 04b029f7e645f314a9ac34a0008f8cf9, type: 3}
+  - {fileID: 7531154302778820891, guid: cec073309a2193e4cb6a62da8a34fcc0, type: 3}
+  - {fileID: 5781193626648127250, guid: 904210df2fdc14346929a586bc94ad03, type: 3}
+  _roomsWithTopDoor:
+  - {fileID: 8223944664078590868, guid: a3e6fe195bfde7d418c5cee901fac279, type: 3}
+  - {fileID: 3316172992156085464, guid: b576916702c5bc84bbee9185fa9e102b, type: 3}
+  - {fileID: 1234588202579734791, guid: a261c4e9f0bbfb842be33596cab63496, type: 3}
+  - {fileID: 1298450042870540407, guid: 796d4dceed57f7c44beadb07ccc3a2b7, type: 3}
+  - {fileID: 275557486273250979, guid: 6bb8df2859c4677449d299140d41fb28, type: 3}
+  - {fileID: 4946270210969602041, guid: 91b3c31a6a3011140854294a4559c65c, type: 3}
+  - {fileID: 5110648830051825145, guid: b95b55898cd2de344b090cb3b26b6bee, type: 3}
+  - {fileID: 6154138338191611709, guid: fe15f13af1558654dae58ead8132e17e, type: 3}
+  _roomsWithBottomDoor:
+  - {fileID: 8223944664078590868, guid: a3e6fe195bfde7d418c5cee901fac279, type: 3}
+  - {fileID: 3316172992156085464, guid: b576916702c5bc84bbee9185fa9e102b, type: 3}
+  - {fileID: 1298450042870540407, guid: 796d4dceed57f7c44beadb07ccc3a2b7, type: 3}
+  - {fileID: 3532077018142248719, guid: 08dbbc736128de44490a3cb0df3055d5, type: 3}
+  - {fileID: 4946270210969602041, guid: 91b3c31a6a3011140854294a4559c65c, type: 3}
+  - {fileID: 3908124291854489395, guid: 04b029f7e645f314a9ac34a0008f8cf9, type: 3}
+  - {fileID: 8359711492338534123, guid: f176e4c551678154d927e487139d69cd, type: 3}
+  - {fileID: 5698577703960977179, guid: ef875351cd1c77743b7a252ee965d091, type: 3}
+  _generationDeep: 4

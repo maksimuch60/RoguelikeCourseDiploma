@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6010760513816327845}
   m_Layer: 0
   m_Name: RightDot
-  m_TagString: Untagged
+  m_TagString: RightDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 5144296709384002154}
   m_Layer: 0
   m_Name: TopDot
-  m_TagString: Untagged
+  m_TagString: TopDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4705347963317670501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 17.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -380,9 +380,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7213299956132494011}
+  - component: {fileID: 3316172992156085464}
   m_Layer: 0
   m_Name: Room1
-  m_TagString: Untagged
+  m_TagString: ThreeDoorRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,6 +407,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3316172992156085464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412218985461118321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed8194fcac4dc0befc98fd26fbf960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPoints:
+  - _spawnPointTransform: {fileID: 5144296709384002154}
+    _connectedRoom: {fileID: 0}
+  - _spawnPointTransform: {fileID: 4398139334796094147}
+    _connectedRoom: {fileID: 0}
+  - _spawnPointTransform: {fileID: 6010760513816327845}
+    _connectedRoom: {fileID: 0}
+  _roomTier: 1
+  _startSpawnTransform: {fileID: 0}
+  _endSpawnTransform: {fileID: 0}
 --- !u!1 &8902529160025196058
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +440,7 @@ GameObject:
   - component: {fileID: 4398139334796094147}
   m_Layer: 0
   m_Name: BottomDot
-  m_TagString: Untagged
+  m_TagString: BottomDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

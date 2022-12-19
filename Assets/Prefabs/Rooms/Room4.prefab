@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 22990233608010280}
   m_Layer: 0
   m_Name: LeftDot
-  m_TagString: Untagged
+  m_TagString: LeftDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 8216981731026982350}
   m_Layer: 0
   m_Name: RightDot
-  m_TagString: Untagged
+  m_TagString: RightDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,9 +268,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5005994638039161296}
+  - component: {fileID: 3532077018142248719}
   m_Layer: 0
   m_Name: Room4
-  m_TagString: Untagged
+  m_TagString: ThreeDoorRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,6 +295,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3532077018142248719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186858569346799130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed8194fcac4dc0befc98fd26fbf960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPoints:
+  - _spawnPointTransform: {fileID: 2047805094174001576}
+    _connectedRoom: {fileID: 0}
+  - _spawnPointTransform: {fileID: 8216981731026982350}
+    _connectedRoom: {fileID: 0}
+  - _spawnPointTransform: {fileID: 22990233608010280}
+    _connectedRoom: {fileID: 0}
+  _roomTier: 1
+  _startSpawnTransform: {fileID: 0}
+  _endSpawnTransform: {fileID: 0}
 --- !u!1 &6552232319968634225
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +328,7 @@ GameObject:
   - component: {fileID: 2047805094174001576}
   m_Layer: 0
   m_Name: BottomDot
-  m_TagString: Untagged
+  m_TagString: BottomDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

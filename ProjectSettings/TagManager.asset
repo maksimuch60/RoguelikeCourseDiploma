@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - OneDoorRoom
+  - TwoDoorRoom
+  - ThreeDoorRoom
+  - FourDoorRoom
+  - TopDot
+  - BottomDot
+  - LeftDot
+  - RightDot
   layers:
   - Default
   - TransparentFX
