@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,10 +8,19 @@ namespace RogueLike.Room
 {
     public class RoomGenerator : MonoBehaviour
     {
+        [Header("Room Lists")]
         [SerializeField] private List<Room> _roomsWithLeftDoor;
         [SerializeField] private List<Room> _roomsWithRightDoor;
         [SerializeField] private List<Room> _roomsWithTopDoor;
         [SerializeField] private List<Room> _roomsWithBottomDoor;
+        
+        [Header("Offsets")]
+        [SerializeField] private float _topOffset;
+        [SerializeField] private float _bottomOffset;
+        [SerializeField] private float _leftOffset;
+        [SerializeField] private float _rightOffset;
+        
+        
         [Range(1, 7)]
         [SerializeField] private int _generationDeep;
         
@@ -20,11 +31,17 @@ namespace RogueLike.Room
         private Room _startRoom;
         private Room _endRoom;
         private int _roomTier;
+        private int _roomsSpawned;
 
         public List<Room> GeneratedDung => _generatedDung;
 
         private void Awake()
         {
+            _roomsWithBottomDoor.RandomSort();
+            _roomsWithRightDoor.RandomSort();
+            _roomsWithLeftDoor.RandomSort();
+            _roomsWithTopDoor.RandomSort();
+            
             _allRooms.Add(_roomsWithLeftDoor);
             _allRooms.Add(_roomsWithRightDoor);
             _allRooms.Add(_roomsWithTopDoor);
@@ -58,7 +75,6 @@ namespace RogueLike.Room
         {
             Room[] generatedDungCopy = new Room[_generatedDung.Count];
             _generatedDung.CopyTo(generatedDungCopy);
-
             GenerateRoomLayer(generatedDungCopy);
         }
 
@@ -82,33 +98,51 @@ namespace RogueLike.Room
 
         private void RoomSideDetermination(SpawnPoint spawnPoint, Room room)
         {
+            Room instantiateRoom = null;
+
             switch (spawnPoint.SpawnPointTag)
             {
                 case "TopDot":
-                    InstantiateRoom(spawnPoint, _roomsWithTopDoor, room);
+                    instantiateRoom = InstantiateRoom(spawnPoint, _roomsWithBottomDoor, room);
+                    instantiateRoom.RoomOffsetY += room.RoomOffsetY + _topOffset;
+                    instantiateRoom.RoomOffsetX += room.RoomOffsetX;
                     break;
                 case "BottomDot":
-                    InstantiateRoom(spawnPoint, _roomsWithBottomDoor, room);
+                    instantiateRoom = InstantiateRoom(spawnPoint, _roomsWithTopDoor, room);
+                    instantiateRoom.RoomOffsetY += room.RoomOffsetY + _bottomOffset;
+                    instantiateRoom.RoomOffsetX += room.RoomOffsetX;
                     break;
                 case "LeftDot":
-                    InstantiateRoom(spawnPoint, _roomsWithLeftDoor, room);
+                    instantiateRoom = InstantiateRoom(spawnPoint, _roomsWithRightDoor, room);
+                    instantiateRoom.RoomOffsetX += room.RoomOffsetX + _leftOffset;
+                    instantiateRoom.RoomOffsetY += room.RoomOffsetY;
                     break;
                 case "RightDot":
-                    InstantiateRoom(spawnPoint, _roomsWithRightDoor, room);
+                    instantiateRoom = InstantiateRoom(spawnPoint, _roomsWithLeftDoor, room);
+                    instantiateRoom.RoomOffsetX += room.RoomOffsetX + _rightOffset;
+                    instantiateRoom.RoomOffsetY += room.RoomOffsetY;
                     break;
+            }
+
+            if (instantiateRoom != null)
+            {
+                instantiateRoom.gameObject.transform.position =
+                    new Vector3(instantiateRoom.RoomOffsetX, instantiateRoom.RoomOffsetY, 0);
+                _generatedDung.Add(instantiateRoom);
             }
         }
 
-        private void InstantiateRoom(SpawnPoint spawnPoint, List<Room> rooms, Room room)
+        private Room InstantiateRoom(SpawnPoint spawnPoint, List<Room> rooms, Room room)
         {
             Room randomRoom = GetRandomRoom(rooms, _roomTier);
-            _generatedDung.Add(randomRoom);
             
-            GameObject roomInstance = Instantiate(randomRoom.gameObject, spawnPoint.SpawnPointTransform.position, Quaternion.identity);
-            
+            GameObject roomInstance = 
+                Instantiate(randomRoom.gameObject, spawnPoint.SpawnPointTransform.position, Quaternion.identity);
             Room connectedRoom = roomInstance.GetComponent<Room>();
             spawnPoint.SetConnectedRoom(connectedRoom);
             connectedRoom.SetSpawnPointEngaged(spawnPoint, room);
+            _roomsSpawned++;
+            return connectedRoom;
         }
 
         private Room GetRandomRoom(List<Room> rooms, int roomTier)
@@ -117,7 +151,7 @@ namespace RogueLike.Room
             
             foreach (Room room in rooms)
             {
-                if (room.RoomTier <= roomTier + 1 && room.RoomTier >= roomTier - 1)
+                if (room.RoomTier <= roomTier + 1 && room.RoomTier >= roomTier)
                 {
                     room.ResetSpawnPoints();
                     randomRoom = room;

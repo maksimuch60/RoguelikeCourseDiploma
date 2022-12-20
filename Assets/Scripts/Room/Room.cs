@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace RogueLike.Room
@@ -12,9 +11,12 @@ namespace RogueLike.Room
         
         [SerializeField] private Transform _startSpawnTransform;
         [SerializeField] private Transform _endSpawnTransform;
-        
+
         public List<SpawnPoint> SpawnPoints => _spawnPoints;
         public int RoomTier => _roomTier;
+        public float RoomOffsetX { get; set; }
+        public float RoomOffsetY { get; set; }
+        
 
         private string GetOppositeTagName(SpawnPoint spawnPoint)
         {
@@ -58,6 +60,12 @@ namespace RogueLike.Room
             {
                 spawnPoint.SetSpawnPointEngaged(false);
             }
+        }
+
+        public void ResetRoomOffset()
+        {
+            RoomOffsetX = 0;
+            RoomOffsetY = 0;
         }
     }
 }

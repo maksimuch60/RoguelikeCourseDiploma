@@ -80,4 +80,8 @@ MonoBehaviour:
   - {fileID: 3908124291854489395, guid: 04b029f7e645f314a9ac34a0008f8cf9, type: 3}
   - {fileID: 8359711492338534123, guid: f176e4c551678154d927e487139d69cd, type: 3}
   - {fileID: 5698577703960977179, guid: ef875351cd1c77743b7a252ee965d091, type: 3}
+  _topOffset: 17.5
+  _bottomOffset: -17.5
+  _leftOffset: -23
+  _rightOffset: 23
   _generationDeep: 4
