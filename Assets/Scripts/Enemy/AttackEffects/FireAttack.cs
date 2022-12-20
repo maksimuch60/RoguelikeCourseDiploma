@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RogueLike
 {
@@ -7,6 +6,8 @@ namespace RogueLike
 
     {
         [SerializeField] private PlayerHp _playerHp;
+
+        [SerializeField] private PlayerAnimation _playerAnimation; 
 
         private int _damage = 3;
 
@@ -20,6 +21,7 @@ namespace RogueLike
             if (CanAttack())
             {
                 ApplyDamage(_damage);   
+                _playerAnimation.Fire();
             }
         }
         

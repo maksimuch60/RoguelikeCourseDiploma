@@ -8,7 +8,8 @@ namespace RogueLike
         
         private static readonly int Death = Animator.StringToHash("Death");
         private static readonly int Speed = Animator.StringToHash("Speed");
-        private static readonly int Talk = Animator.StringToHash("Talk");
+        private static readonly int Freeze = Animator.StringToHash("Freeze");
+        private static readonly int InFire = Animator.StringToHash("InFire");
 
         public void PlayDeath()
         {
@@ -20,14 +21,14 @@ namespace RogueLike
             _animator.SetFloat(Speed, speed);
         }
 
-        public void StartPlayTalk()
+        public void Freezed()
         {
-            _animator.SetBool(Talk, true);
+            _animator.SetTrigger(Freeze); 
         }
 
-        public void StopPlayTalk()
+        public void Fire()
         {
-            _animator.SetBool(Talk, false);
+            _animator.SetTrigger(InFire);
         }
     }
 }

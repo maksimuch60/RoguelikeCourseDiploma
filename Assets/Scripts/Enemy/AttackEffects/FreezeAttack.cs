@@ -6,6 +6,8 @@ namespace RogueLike
 {
     public class FreezeAttack : SpecialEffectAttack
     {
+        [SerializeField] private PlayerAnimation _playerAnimation; 
+        
         [SerializeField] private PlayerMovement _playerMovement;
 
         [SerializeField] private float _defaultSpeed = 10;
@@ -37,6 +39,7 @@ namespace RogueLike
             {
                 Timer = _fireDelay;
                 _playerMovement.Speed += _freezeSpeed;
+                _playerAnimation.Freezed();
                 Debug.Log($"Default speed is {_playerMovement.Speed}");
                 yield return new WaitForSeconds(_duration);
                 _playerMovement.Speed = _defaultSpeed; 

@@ -327,6 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2653f52a9a7460285deca311043ad0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerAnimation: {fileID: 0}
   _playerMovement: {fileID: 0}
   _defaultSpeed: 10
   _freezeSpeed: -3
@@ -344,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHp: {fileID: 0}
+  _playerAnimation: {fileID: 0}
 --- !u!114 &7806704379056209264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8296592599847588909
 Transform:
   m_ObjectHideFlags: 0

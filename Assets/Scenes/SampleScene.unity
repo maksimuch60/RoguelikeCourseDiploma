@@ -411,6 +411,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &898850934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 898850934, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
+  m_PrefabInstance: {fileID: 4783201294091898194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e9989786681914ab266cf2f896cbec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127563640
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyArcher
       objectReference: {fileID: 0}
+    - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8967444361591388031, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -856,10 +871,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarriorOrc
       objectReference: {fileID: 0}
-    - target: {fileID: 7832228698562643709, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
 --- !u!1001 &8296592601023786992
@@ -877,10 +888,18 @@ PrefabInstance:
       propertyPath: _playerMovement
       value: 
       objectReference: {fileID: 2088877470}
+    - target: {fileID: 605737875, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: _playerAnimation
+      value: 
+      objectReference: {fileID: 898850934}
     - target: {fileID: 6350129899065079597, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: _playerHp
       value: 
       objectReference: {fileID: 2088877471}
+    - target: {fileID: 6350129899065079597, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: _playerAnimation
+      value: 
+      objectReference: {fileID: 898850934}
     - target: {fileID: 7806704379056209264, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: _blindZone
       value: 
@@ -888,10 +907,6 @@ PrefabInstance:
     - target: {fileID: 8296592599847588908, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: m_Name
       value: ShamanOrc
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296592599847588908, guid: 5588a20db9098f94696e5900fec62121, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8296592599847588909, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: m_RootOrder
