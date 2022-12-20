@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 1581174066}
   m_Layer: 7
   m_Name: ArcherModel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101755117729466797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.084, y: 0.312, z: -0.18414834}
+  m_LocalPosition: {x: 0.084, y: 0.312, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,9 +430,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8967444361591388031}
   - component: {fileID: 2068087453418708522}
-  - component: {fileID: 257954257}
   - component: {fileID: 2287159838325095634}
-  - component: {fileID: 5836539140788226748}
+  - component: {fileID: 8075047416583605695}
+  - component: {fileID: 7184796396103964314}
   m_Layer: 7
   m_Name: EnemyArcher
   m_TagString: Enemy
@@ -482,21 +482,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &257954257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7735447049408960303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da51a4c730b46a5960e9253951f65a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startHp: 50
-  _maxHp: 50
+  m_Constraints: 4
 --- !u!114 &2287159838325095634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +498,7 @@ MonoBehaviour:
   _speed: 4
   _target: {fileID: 0}
   _enemyAttack: {fileID: 2057576801}
---- !u!114 &5836539140788226748
+--- !u!114 &8075047416583605695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -521,12 +507,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 7735447049408960303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d84fef8f1b4282a55eaec6921906d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 337bb0f452da4d7686016271439e3a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyHp: {fileID: 257954257}
+  _enemyHp: {fileID: 7184796396103964314}
   _enemyMovement: {fileID: 2287159838325095634}
   _enemyAttack: {fileID: 2057576801}
+--- !u!114 &7184796396103964314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735447049408960303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da51a4c730b46a5960e9253951f65a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startHp: 30
+  _maxHp: 30
 --- !u!1 &8101483743302102489
 GameObject:
   m_ObjectHideFlags: 0
