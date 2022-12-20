@@ -422,7 +422,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.003104359, y: -0.5111691}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 4505703878284297534}
   - component: {fileID: 474749614088664372}
   - component: {fileID: 7122027762185425561}
-  - component: {fileID: 2004021453913469155}
+  - component: {fileID: 83199674}
   m_Layer: 7
   m_Name: WarriorOrc
   m_TagString: Enemy
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startHp: 50
   _maxHp: 50
---- !u!114 &2004021453913469155
+--- !u!114 &83199674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7832228698562643709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d84fef8f1b4282a55eaec6921906d5, type: 3}
+  m_Script: {fileID: 11500000, guid: a4297d1e128a482da8b5a80c94892f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyHp: {fileID: 7122027762185425561}
