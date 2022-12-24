@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+﻿using RogueLike.Animations;
+using UnityEngine;
 
 namespace RogueLike
 {
     public abstract class EnemyDeath : MonoBehaviour
     {
         #region Variables
-
         [SerializeField] protected EnemyHp _enemyHp;
         [SerializeField] protected EnemyMovement _enemyMovement;
         [SerializeField] protected EnemyAttack _enemyAttack;
@@ -32,7 +32,7 @@ namespace RogueLike
 
         #region Private methods
 
-        protected abstract void OnHpChanged(int hp); 
+        protected abstract void OnHpChanged(int hp);
 
         #endregion
     }

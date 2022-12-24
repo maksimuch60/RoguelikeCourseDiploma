@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 7832228698514199424}
   - component: {fileID: 7832228698514199427}
   - component: {fileID: 8103468878472279832}
+  - component: {fileID: 837614212}
   m_Layer: 7
   m_Name: WarriorOrcModel
   m_TagString: Enemy
@@ -428,6 +429,26 @@ CapsuleCollider2D:
   m_Offset: {x: -0.003104359, y: -0.5111691}
   m_Size: {x: 0.58971554, y: 1.0639327}
   m_Direction: 0
+--- !u!95 &837614212
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832228698514199425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737bb7ae6afd8b0499bf1e13fe40440d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7832228698562643709
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,13 +462,14 @@ GameObject:
   - component: {fileID: 474749614088664372}
   - component: {fileID: 7122027762185425561}
   - component: {fileID: 83199674}
+  - component: {fileID: 7671983265474938956}
   m_Layer: 7
   m_Name: WarriorOrc
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7832228698562643708
 Transform:
   m_ObjectHideFlags: 0
@@ -505,6 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4
   _target: {fileID: 0}
+  _enemyAnimation: {fileID: 7671983265474938956}
 --- !u!114 &7122027762185425561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +557,20 @@ MonoBehaviour:
   _enemyHp: {fileID: 7122027762185425561}
   _enemyMovement: {fileID: 474749614088664372}
   _enemyAttack: {fileID: 4756258230519857978}
+  _enemyAnimation: {fileID: 7671983265474938956}
+--- !u!114 &7671983265474938956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832228698562643709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790c72897d0b4aedb17e35fa079323e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 837614212}
 --- !u!1 &7832228699041829480
 GameObject:
   m_ObjectHideFlags: 0

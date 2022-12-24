@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using RogueLike.Animations;
+using UnityEngine;
 
 namespace RogueLike
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class EnemyMovement : MonoBehaviour
     {
+        [SerializeField] private EnemyAnimation _enemyAnimation; 
         [SerializeField] protected float _speed = 4;
         [SerializeField] protected Transform _target;
 
@@ -60,7 +62,7 @@ namespace RogueLike
         protected void SetVelocity(Vector2 velocity)
         {
             _rb.velocity = velocity;
-            //SetAnimationSpeed(velocity.magnitude);
+            _enemyAnimation.PlayRun(velocity.magnitude);
         }
     }
 }
