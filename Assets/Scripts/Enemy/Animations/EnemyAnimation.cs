@@ -8,6 +8,7 @@ namespace RogueLike.Animations
         
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int Death = Animator.StringToHash("Death");
+        private static readonly int IsAttack = Animator.StringToHash("IsAttack");
         
         public void PlayRun(float speed)
         {
@@ -18,5 +19,15 @@ namespace RogueLike.Animations
         {
             _animator.SetTrigger(Death);
         }
+
+        public void StopPlayAttack()
+        {
+            _animator.SetBool(IsAttack, false);
+        } 
+        public void StartPlayAttack()
+        {
+            _animator.SetBool(IsAttack, true);
+        }
+        
     }
 }
