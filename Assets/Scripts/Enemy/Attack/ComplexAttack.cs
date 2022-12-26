@@ -7,6 +7,12 @@ namespace RogueLike
     {
         [SerializeField] private ComplexAttackInfo[] _attacksInfo;
         private int _randomAttackIndex;
+
+        private void OnDestroy()
+        {
+            _attacksInfo[_randomAttackIndex].SpecialEffectAttack.enabled = false;
+        }
+
         public void ShootSpecialProjectile()
         {
             _randomAttackIndex = Random.Range(0, _attacksInfo.Length);

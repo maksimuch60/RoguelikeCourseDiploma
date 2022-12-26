@@ -742,31 +742,6 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
---- !u!1 &2031145119 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8296592599984877679, guid: 5588a20db9098f94696e5900fec62121, type: 3}
-  m_PrefabInstance: {fileID: 8296592601023786992}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2031145121
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031145119}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14cbce421affff54684572d71664ea96, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2088877467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4783201294106756914, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
@@ -1015,6 +990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarriorOrc
       objectReference: {fileID: 0}
+    - target: {fileID: 7832228698562643709, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7832228700046991792, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.023
@@ -1068,6 +1047,14 @@ PrefabInstance:
       propertyPath: _playerAnimation
       value: 
       objectReference: {fileID: 898850934}
+    - target: {fileID: 733057774001776017, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.72599995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321285707020526386, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.724
+      objectReference: {fileID: 0}
     - target: {fileID: 6350129899065079597, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: _playerHp
       value: 
@@ -1083,10 +1070,6 @@ PrefabInstance:
     - target: {fileID: 8296592599847588908, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: m_Name
       value: ShamanOrc
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296592599847588908, guid: 5588a20db9098f94696e5900fec62121, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8296592599847588909, guid: 5588a20db9098f94696e5900fec62121, type: 3}
       propertyPath: m_RootOrder
@@ -1132,5 +1115,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8296592599984877649, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7877039
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296592599984877649, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.6085014
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296592599984877649, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296592599984877649, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296592599984877650, guid: 5588a20db9098f94696e5900fec62121, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1899781941, guid: c80ac7e52f030f242a59d511ac7a646f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5588a20db9098f94696e5900fec62121, type: 3}

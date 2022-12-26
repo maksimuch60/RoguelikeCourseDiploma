@@ -1,18 +1,16 @@
-﻿using RogueLike.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RogueLike
 {
     public class OrcDeath : EnemyDeath
     {
-        [SerializeField] private EnemyAnimation _enemyAnimation;
         [SerializeField] private GameObject[] _orcCosmetics;
 
         protected override void OnHpChanged(int hp)
         {
             if (IsDead || hp > 0)
                 return;
-            IsDead = true; 
+            IsDead = true;
             _enemyHp.enabled = false;
             _enemyMovement.enabled = false;
             _enemyAnimation.PlayDeath();

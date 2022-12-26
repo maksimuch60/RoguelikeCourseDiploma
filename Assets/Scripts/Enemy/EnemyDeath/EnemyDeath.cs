@@ -6,10 +6,11 @@ namespace RogueLike
     public abstract class EnemyDeath : MonoBehaviour
     {
         #region Variables
+
+        [SerializeField] public EnemyAnimation _enemyAnimation;
         [SerializeField] protected EnemyHp _enemyHp;
         [SerializeField] protected EnemyMovement _enemyMovement;
-        [SerializeField] protected EnemyAttack _enemyAttack;
-        
+
         #endregion
 
 
@@ -24,7 +25,7 @@ namespace RogueLike
 
         private void Start()
         {
-            _enemyHp.OnChanged += OnHpChanged; 
+            _enemyHp.OnChanged += OnHpChanged;
         }
 
         #endregion
