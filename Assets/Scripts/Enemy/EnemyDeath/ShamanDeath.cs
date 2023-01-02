@@ -11,6 +11,7 @@ namespace RogueLike
         {
             if (IsDead || hp > 0)
                 return;
+            IsDead = true; 
             _shamanModel.enabled = false;
             _enemyHp.enabled = false;
             _enemyMovement.enabled = false;

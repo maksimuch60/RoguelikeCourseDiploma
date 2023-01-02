@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714560468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.592, y: 0.353, z: 0}
+  m_LocalPosition: {x: 0.543, y: -0.181, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 1101755117729466795}
   - component: {fileID: 1101755117729466796}
   - component: {fileID: 1581174066}
+  - component: {fileID: 1376841772}
   m_Layer: 7
   m_Name: ArcherModel
   m_TagString: Enemy
@@ -237,7 +238,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1420773187, guid: f3b7749487f2841448bb13851db1004d, type: 3}
+  m_Sprite: {fileID: 1098319501, guid: b91e18022c90a694aa3509d2ddb654fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,19 +262,39 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06424761, y: -0.029064298}
+  m_Offset: {x: -0.06424761, y: -0.5205559}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.75, y: 0.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6879406, y: 0.9418714}
+  m_Size: {x: 0.6879406, y: 0.96527565}
   m_EdgeRadius: 0
+--- !u!95 &1376841772
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101755117729466797}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b5ac5d8bf3f6774c85b4d982aa52bbf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3219133389153545719
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3219133389153545719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 0.279, z: 0}
+  m_LocalPosition: {x: -0.259, y: -0.2549999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -346,7 +367,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1703864717, guid: 5aa0c970e113242439aca82ee6e33760, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -433,6 +454,7 @@ GameObject:
   - component: {fileID: 2287159838325095634}
   - component: {fileID: 8075047416583605695}
   - component: {fileID: 7184796396103964314}
+  - component: {fileID: 5319432575450015434}
   m_Layer: 7
   m_Name: EnemyArcher
   m_TagString: Enemy
@@ -495,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97e2fa47896442fa6c074eb2fd3f355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyAnimation: {fileID: 5319432575450015434}
   _speed: 4
   _target: {fileID: 0}
   _enemyAttack: {fileID: 2057576801}
@@ -510,9 +533,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337bb0f452da4d7686016271439e3a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyAnimation: {fileID: 5319432575450015434}
   _enemyHp: {fileID: 7184796396103964314}
   _enemyMovement: {fileID: 2287159838325095634}
-  _enemyAttack: {fileID: 2057576801}
+  _archerCosmetics: []
 --- !u!114 &7184796396103964314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +551,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startHp: 30
   _maxHp: 30
+--- !u!114 &5319432575450015434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735447049408960303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790c72897d0b4aedb17e35fa079323e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1376841772}
 --- !u!1 &8101483743302102489
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8101483743302102489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 0.165, z: 0}
+  m_LocalPosition: {x: -0.17900026, y: -0.3689999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,7 +673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8474028555602539592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.685, y: 0.246, z: 0}
+  m_LocalPosition: {x: 0.63599974, y: -0.28799993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
