@@ -337,7 +337,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8776381100172963654}
-  m_Layer: 0
+  - component: {fileID: 297006386189381708}
+  m_Layer: 13
   m_Name: BottomDot
   m_TagString: BottomDot
   m_Icon: {fileID: 0}
@@ -359,6 +360,22 @@ Transform:
   m_Father: {fileID: 1119761946052330115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &297006386189381708
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561741161419015071}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &4841523606163835928
 GameObject:
   m_ObjectHideFlags: 0

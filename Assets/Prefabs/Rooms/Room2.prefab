@@ -342,7 +342,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4531831784730031335}
-  m_Layer: 0
+  - component: {fileID: 8491309222097128382}
+  m_Layer: 13
   m_Name: TopDot
   m_TagString: TopDot
   m_Icon: {fileID: 0}
@@ -364,6 +365,22 @@ Transform:
   m_Father: {fileID: 3659429340239849867}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &8491309222097128382
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092852235154455784}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &5538274399394689343
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +390,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6391664048113104846}
-  m_Layer: 0
+  - component: {fileID: 7422931579869736788}
+  m_Layer: 13
   m_Name: LeftDot
   m_TagString: LeftDot
   m_Icon: {fileID: 0}
@@ -395,6 +413,22 @@ Transform:
   m_Father: {fileID: 3659429340239849867}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7422931579869736788
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538274399394689343}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &8240182145020101106
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +438,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3092557537117231144}
-  m_Layer: 0
+  - component: {fileID: 4212514898289955829}
+  m_Layer: 13
   m_Name: RightDot
   m_TagString: RightDot
   m_Icon: {fileID: 0}
@@ -426,6 +461,22 @@ Transform:
   m_Father: {fileID: 3659429340239849867}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4212514898289955829
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240182145020101106}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &9111443984110069520
 GameObject:
   m_ObjectHideFlags: 0

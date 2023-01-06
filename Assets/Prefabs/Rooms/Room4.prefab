@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22990233608010280}
-  m_Layer: 0
+  - component: {fileID: 6003157421995598418}
+  m_Layer: 13
   m_Name: LeftDot
   m_TagString: LeftDot
   m_Icon: {fileID: 0}
@@ -31,6 +32,22 @@ Transform:
   m_Father: {fileID: 7650079130772038765}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6003157421995598418
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457348587106598105}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2778782473401182966
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +91,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8216981731026982350}
-  m_Layer: 0
+  - component: {fileID: 2997078792475185170}
+  m_Layer: 13
   m_Name: RightDot
   m_TagString: RightDot
   m_Icon: {fileID: 0}
@@ -96,6 +114,22 @@ Transform:
   m_Father: {fileID: 7650079130772038765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2997078792475185170
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078614862819494932}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &5511520302400116439
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +360,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2047805094174001576}
-  m_Layer: 0
+  - component: {fileID: 3640759103934641126}
+  m_Layer: 13
   m_Name: BottomDot
   m_TagString: BottomDot
   m_Icon: {fileID: 0}
@@ -348,6 +383,22 @@ Transform:
   m_Father: {fileID: 7650079130772038765}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &3640759103934641126
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552232319968634225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &8727334520315123807
 GameObject:
   m_ObjectHideFlags: 0
