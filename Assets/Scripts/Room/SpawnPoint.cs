@@ -6,14 +6,17 @@ namespace RogueLike.Room
     [Serializable]
     public class SpawnPoint
     {
-        [SerializeField] private Transform _spawnPointTransform;
+        [SerializeField] private GameObject _spawnPoint;
         [SerializeField] private Room _connectedRoom;
-
+        [SerializeField] private bool _isAbleToSpawn;
+        
         private bool _isSpawnPointEngaged;
         
-        public string SpawnPointTag => _spawnPointTransform.tag;
-        public Transform SpawnPointTransform => _spawnPointTransform;
+        public string SpawnPointTag => _spawnPoint.tag;
+        public GameObject SpawnPointGO => _spawnPoint;
+        public Transform SpawnPointTransform => _spawnPoint.transform;
         public bool IsSpawnPointEngaged => _isSpawnPointEngaged;
+        public bool IsAbleToSpawn => _isAbleToSpawn;
         
         public void SetConnectedRoom(Room connectedRoom)
         {

@@ -293,6 +293,54 @@ Transform:
   m_Father: {fileID: 5005994638039161296}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5880800439375495174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970200818704991233}
+  - component: {fileID: 636658195596184685}
+  m_Layer: 13
+  m_Name: TopDot
+  m_TagString: TopDot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1970200818704991233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880800439375495174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 17.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7650079130772038765}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &636658195596184685
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880800439375495174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &6186858569346799130
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,12 +391,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoints:
-  - _spawnPointTransform: {fileID: 2047805094174001576}
+  - _spawnPoint: {fileID: 6552232319968634225}
     _connectedRoom: {fileID: 0}
-  - _spawnPointTransform: {fileID: 8216981731026982350}
+    _isAbleToSpawn: 1
+  - _spawnPoint: {fileID: 3078614862819494932}
     _connectedRoom: {fileID: 0}
-  - _spawnPointTransform: {fileID: 22990233608010280}
+    _isAbleToSpawn: 1
+  - _spawnPoint: {fileID: 1457348587106598105}
     _connectedRoom: {fileID: 0}
+    _isAbleToSpawn: 1
+  - _spawnPoint: {fileID: 5880800439375495174}
+    _connectedRoom: {fileID: 0}
+    _isAbleToSpawn: 0
   _roomTier: 1
   _startSpawnTransform: {fileID: 0}
   _endSpawnTransform: {fileID: 0}
@@ -536,6 +590,7 @@ Transform:
   - {fileID: 2047805094174001576}
   - {fileID: 8216981731026982350}
   - {fileID: 22990233608010280}
+  - {fileID: 1970200818704991233}
   m_Father: {fileID: 5005994638039161296}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -84,13 +85,22 @@ namespace RogueLike.Room
 
                 foreach (SpawnPoint spawnPoint in roomSpawnPoints)
                 {
-                    if (spawnPoint.IsSpawnPointEngaged)
+                    if (spawnPoint.IsSpawnPointEngaged || !spawnPoint.IsAbleToSpawn)
                     {
                         continue;
                     }
 
+                    Collider2D[] overlapCircleAll = Physics2D.OverlapCircleAll(spawnPoint.SpawnPointTransform.position, 1f);
+                    
+                    foreach (Collider2D collider2D1 in overlapCircleAll)
+                    {
+                        Debug.Log($"{room.name}:{spawnPoint.SpawnPointGO.name}:{collider2D1.gameObject.name}");
+                    }
+
                     RoomSideDetermination(spawnPoint, room);
                 }
+
+                Debug.Log($"--------------------------------------------------------------------------");
             }
         }
 

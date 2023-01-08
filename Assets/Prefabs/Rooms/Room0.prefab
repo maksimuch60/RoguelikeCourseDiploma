@@ -213,14 +213,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoints:
-  - _spawnPointTransform: {fileID: 2781443941507149293}
+  - _spawnPoint: {fileID: 2355764222154057186}
     _connectedRoom: {fileID: 0}
-  - _spawnPointTransform: {fileID: 6698205539073580356}
+    _isAbleToSpawn: 1
+  - _spawnPoint: {fileID: 1905507547270525341}
     _connectedRoom: {fileID: 0}
-  - _spawnPointTransform: {fileID: 3645409677259178274}
+    _isAbleToSpawn: 1
+  - _spawnPoint: {fileID: 7649050025530153208}
     _connectedRoom: {fileID: 0}
-  - _spawnPointTransform: {fileID: 4669706071176179396}
+    _isAbleToSpawn: 1
+  - _spawnPoint: {fileID: 6099570722317084725}
     _connectedRoom: {fileID: 0}
+    _isAbleToSpawn: 1
   _roomTier: 0
   _startSpawnTransform: {fileID: 0}
   _endSpawnTransform: {fileID: 0}
