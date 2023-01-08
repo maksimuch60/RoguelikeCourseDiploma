@@ -10,6 +10,7 @@ TagManager:
   - EnemyAttackZone
   - EnemyAgroTrigger
   - PlayerWeapon
+  - Pause
   layers:
   - Default
   - TransparentFX
