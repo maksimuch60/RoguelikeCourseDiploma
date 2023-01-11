@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RogueLike.UI.HUD
+namespace RogueLike
 {
     public class HealthBar : MonoBehaviour
     {

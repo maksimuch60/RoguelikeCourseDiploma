@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-namespace RogueLike.UI
+
+namespace RogueLike
 {
     public class StartScreen : BaseScreen
     {

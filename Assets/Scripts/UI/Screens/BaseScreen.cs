@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace RogueLike.UI
+namespace RogueLike
 {
     public class BaseScreen : MonoBehaviour
     {
@@ -17,6 +17,11 @@ namespace RogueLike.UI
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #endif
+        }
+        
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

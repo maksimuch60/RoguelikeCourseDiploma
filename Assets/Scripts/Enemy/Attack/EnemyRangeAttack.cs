@@ -28,7 +28,6 @@ namespace RogueLike
         {
             Timer = _fireDelay;
             Instantiate(_enemyBulletPrefab, transform.position, RotateToPlayer(_player.position));
-            Debug.Log("Shoot");
         }
         
         private Quaternion RotateToPlayer(Vector3 playerPosition)

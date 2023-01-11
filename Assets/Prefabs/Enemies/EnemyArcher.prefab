@@ -160,6 +160,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d30ae522b84579a2bc437468f0d3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHp: {fileID: 0}
+  _damage: 10
+  _attackPoint: {fileID: 0}
+  _radius: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _fireDelay: 3
   _enemyBulletPrefab: {fileID: 1233653146994486253, guid: fd52d48f0acbd1c45bb5962890105396, type: 3}
   _player: {fileID: 0}
@@ -536,7 +543,11 @@ MonoBehaviour:
   _enemyAnimation: {fileID: 5319432575450015434}
   _enemyHp: {fileID: 7184796396103964314}
   _enemyMovement: {fileID: 2287159838325095634}
-  _archerCosmetics: []
+  _archerCosmetics:
+  - {fileID: 3219133389153545719}
+  - {fileID: 8474028555602539592}
+  - {fileID: 8101483743302102489}
+  - {fileID: 714560468}
 --- !u!114 &7184796396103964314
 MonoBehaviour:
   m_ObjectHideFlags: 0

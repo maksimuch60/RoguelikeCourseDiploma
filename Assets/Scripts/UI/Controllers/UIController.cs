@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-namespace RogueLike.UI
+namespace RogueLike
 {
     public class UIController : MonoBehaviour
     {
         [SerializeField] private GameObject _pauseScreen;
-        [SerializeField] private PauseManager _pause; 
+        [SerializeField] private Pause _pause; 
 
         private void Awake()
         {

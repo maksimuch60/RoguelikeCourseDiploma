@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2826451815554099486}
   - component: {fileID: 2826451815554099482}
   - component: {fileID: 2826451815554099483}
+  - component: {fileID: 7407695492664413569}
   m_Layer: 10
   m_Name: ShamanProjectile
   m_TagString: Untagged
@@ -143,3 +144,19 @@ MonoBehaviour:
   _speed: 15
   _lifeTime: 3
   Damage: 10
+--- !u!70 &7407695492664413569
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826451815554099487}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3108441, y: -0.0016964301}
+  m_Size: {x: 0.13827671, y: 0.06264564}
+  m_Direction: 1

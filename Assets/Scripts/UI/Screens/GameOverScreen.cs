@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 namespace RogueLike
 {
-    public class PauseScreen : BaseScreen
+    public class GameOverScreen : BaseScreen
     {
         [SerializeField] private Button _toMenuButton;
         [SerializeField] private Button _exitButton;
-        [SerializeField] private Button _continueButton;
+        [SerializeField] private Button _restartButton;
 
         private void Awake()
         {
             _toMenuButton.onClick.AddListener(MoveToNextScene);
             _exitButton.onClick.AddListener(Exit);
-            _continueButton.onClick.AddListener(FindObjectOfType<Pause>().Resume);
+            _restartButton.onClick.AddListener(Restart);
         }
     }
 }

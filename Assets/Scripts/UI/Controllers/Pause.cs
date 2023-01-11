@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-namespace RogueLike.UI
+namespace RogueLike
 {
-    public class PauseManager : MonoBehaviour
+    public class Pause : MonoBehaviour
     {
         #region Events
 

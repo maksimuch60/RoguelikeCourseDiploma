@@ -1,5 +1,4 @@
 ﻿using System;
-using RogueLike.UI.HUD;
 using UnityEngine;
 
 namespace RogueLike
