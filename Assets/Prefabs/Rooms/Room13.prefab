@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 8551898988267460217}
   m_Layer: 13
   m_Name: BottomDot
-  m_TagString: LeftDot
+  m_TagString: BottomDot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

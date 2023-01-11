@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,7 +20,7 @@ namespace RogueLike.Room
         [SerializeField] private float _rightOffset;
         
         
-        [Range(1, 7)]
+        [Range(3, 6)]
         [SerializeField] private int _generationDeep;
         
 
@@ -29,7 +29,7 @@ namespace RogueLike.Room
 
         private Room _startRoom;
         private Room _endRoom;
-        private int _roomTier;
+        private float _roomTier;
         private int _roomsSpawned;
 
         public List<Room> GeneratedDung => _generatedDung;
@@ -54,19 +54,15 @@ namespace RogueLike.Room
 
         private void Generate()
         {
-            float generationDeepIndex = (float) _generationDeep / 4;
-            float generationDeepSum = 0;
+            float generationDeepIndex = (float) 4 / _generationDeep;
             
             SetStartRoom();
-            
+
             for (int i = 0; i < _generationDeep; i++)
             {
+                _roomTier += generationDeepIndex;
+                
                 SetRooms();
-                if (i >= generationDeepSum)
-                {
-                    _roomTier++;
-                    generationDeepSum += generationDeepIndex;
-                }
             }
         }
 
@@ -89,19 +85,44 @@ namespace RogueLike.Room
                     {
                         continue;
                     }
-
-                    Collider2D[] overlapCircleAll = Physics2D.OverlapCircleAll(spawnPoint.SpawnPointTransform.position, 1f);
                     
-                    foreach (Collider2D collider2D1 in overlapCircleAll)
+                    if (!CheckSpawnPointNeighbors(spawnPoint, out List<string> overlapCircleClear))
                     {
-                        Debug.Log($"{room.name}:{spawnPoint.SpawnPointGO.name}:{collider2D1.gameObject.name}");
+                        continue;
                     }
 
+                    foreach (string spawnPointName in overlapCircleClear)
+                    {
+                        Debug.Log($"{room.name}  ---  spawnPoint:{spawnPoint}  ---  {spawnPointName}");
+                    }
+                    
                     RoomSideDetermination(spawnPoint, room);
                 }
-
-                Debug.Log($"--------------------------------------------------------------------------");
             }
+        }
+
+        private bool CheckSpawnPointNeighbors(SpawnPoint spawnPoint, out List<string> overlapCircleClear)
+        {
+            Collider2D[] overlapCircleAll = Physics2D.OverlapCircleAll(spawnPoint.SpawnPointTransform.position, 1f);
+
+            overlapCircleClear = new();
+
+            foreach (Collider2D collider2D1 in overlapCircleAll)
+            {
+                if (spawnPoint.SpawnPointGO.name == collider2D1.name)
+                {
+                    continue;
+                }
+
+                if (collider2D1.gameObject.layer.Equals(LayerMask.NameToLayer("Room")))
+                {
+                    return false;
+                }
+
+                overlapCircleClear.Add(collider2D1.gameObject.tag);
+            }
+
+            return true;
         }
 
         private void RoomSideDetermination(SpawnPoint spawnPoint, Room room)
@@ -153,7 +174,7 @@ namespace RogueLike.Room
             return connectedRoom;
         }
 
-        private Room GetRandomRoom(List<Room> rooms, int roomTier)
+        private Room GetRandomRoom(List<Room> rooms, float roomTier)
         {
             Room randomRoom = null;
             
