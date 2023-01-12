@@ -248,6 +248,7 @@ namespace RogueLike.Room
                     if (roomSpawnPoint.SpawnPointTag == spawnPoint.SpawnPointTag)
                     {
                         roomSpawnPoint.SetConnectedRoom(connectedRoom);
+                        
                     }
                 }
 
@@ -256,6 +257,8 @@ namespace RogueLike.Room
                 _generatedDung.Remove(wrongRoom);
                 Destroy(wrongRoom.gameObject);
                 Room instantiate = Instantiate(oneDoorRoom, wrongRoomPosition, Quaternion.identity);
+                if (connectedRoom != null)
+                    connectedRoom.SetSpawnPointEngaged(spawnPoint, instantiate);
                 _generatedDung.Insert(wrongRoomIndex, instantiate);
                 
                 
