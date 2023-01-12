@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,17 +11,15 @@ namespace RogueLike.Room
         [SerializeField] private List<Room> _roomsWithRightDoor;
         [SerializeField] private List<Room> _roomsWithTopDoor;
         [SerializeField] private List<Room> _roomsWithBottomDoor;
-        
+
         [Header("Offsets")]
         [SerializeField] private float _topOffset;
         [SerializeField] private float _bottomOffset;
         [SerializeField] private float _leftOffset;
         [SerializeField] private float _rightOffset;
-        
-        
+
         [Range(3, 6)]
         [SerializeField] private int _generationDeep;
-        
 
         private readonly List<Room> _generatedDung = new();
         private readonly List<List<Room>> _allRooms = new();
@@ -40,7 +37,7 @@ namespace RogueLike.Room
             _roomsWithRightDoor.RandomSort();
             _roomsWithLeftDoor.RandomSort();
             _roomsWithTopDoor.RandomSort();
-            
+
             _allRooms.Add(_roomsWithLeftDoor);
             _allRooms.Add(_roomsWithRightDoor);
             _allRooms.Add(_roomsWithTopDoor);
@@ -55,15 +52,35 @@ namespace RogueLike.Room
         private void Generate()
         {
             float generationDeepIndex = (float) 4 / _generationDeep;
-            
+
             SetStartRoom();
 
             for (int i = 0; i < _generationDeep; i++)
             {
                 _roomTier += generationDeepIndex;
-                
+
                 SetRooms();
             }
+
+            FindWrongRooms();
+        }
+
+        private void SetStartRoom()
+        {
+            List<Room> randomRoomList = _allRooms[GetRandomIndexFromZeroToThree()];
+            foreach (Room room in randomRoomList)
+            {
+                if (room.gameObject.CompareTag("OneDoorRoom"))
+                {
+                    room.ResetSpawnPoints();
+                    _startRoom = room;
+                    break;
+                }
+            }
+
+            GameObject instantiateRoom = Instantiate(_startRoom.gameObject, Vector3.zero, Quaternion.identity);
+            Room roomComponent = instantiateRoom.GetComponent<Room>();
+            _generatedDung.Add(roomComponent);
         }
 
         private void SetRooms()
@@ -85,27 +102,20 @@ namespace RogueLike.Room
                     {
                         continue;
                     }
-                    
-                    if (!CheckSpawnPointNeighbors(spawnPoint, out List<string> overlapCircleClear))
+
+                    if (!CheckSpawnPointNeighbors(spawnPoint))
                     {
                         continue;
                     }
 
-                    foreach (string spawnPointName in overlapCircleClear)
-                    {
-                        Debug.Log($"{room.name}  ---  spawnPoint:{spawnPoint}  ---  {spawnPointName}");
-                    }
-                    
                     RoomSideDetermination(spawnPoint, room);
                 }
             }
         }
 
-        private bool CheckSpawnPointNeighbors(SpawnPoint spawnPoint, out List<string> overlapCircleClear)
+        private bool CheckSpawnPointNeighbors(SpawnPoint spawnPoint)
         {
             Collider2D[] overlapCircleAll = Physics2D.OverlapCircleAll(spawnPoint.SpawnPointTransform.position, 1f);
-
-            overlapCircleClear = new();
 
             foreach (Collider2D collider2D1 in overlapCircleAll)
             {
@@ -118,8 +128,6 @@ namespace RogueLike.Room
                 {
                     return false;
                 }
-
-                overlapCircleClear.Add(collider2D1.gameObject.tag);
             }
 
             return true;
@@ -164,8 +172,8 @@ namespace RogueLike.Room
         private Room InstantiateRoom(SpawnPoint spawnPoint, List<Room> rooms, Room room)
         {
             Room randomRoom = GetRandomRoom(rooms, _roomTier);
-            
-            GameObject roomInstance = 
+
+            GameObject roomInstance =
                 Instantiate(randomRoom.gameObject, spawnPoint.SpawnPointTransform.position, Quaternion.identity);
             Room connectedRoom = roomInstance.GetComponent<Room>();
             spawnPoint.SetConnectedRoom(connectedRoom);
@@ -177,7 +185,7 @@ namespace RogueLike.Room
         private Room GetRandomRoom(List<Room> rooms, float roomTier)
         {
             Room randomRoom = null;
-            
+
             foreach (Room room in rooms)
             {
                 if (room.RoomTier <= roomTier + 1 && room.RoomTier >= roomTier)
@@ -191,21 +199,104 @@ namespace RogueLike.Room
             return randomRoom;
         }
 
-        private void SetStartRoom()
+        private void FindWrongRooms()
         {
-            List<Room> randomRoomList = _allRooms[GetRandomIndexFromZeroToThree()];
-            foreach (Room room in randomRoomList)
+            List<Room> wrongRooms = new();
+            foreach (Room room in _generatedDung)
             {
-                if (room.gameObject.CompareTag("OneDoorRoom"))
+                foreach (SpawnPoint spawnPoint in room.SpawnPoints)
                 {
-                    room.ResetSpawnPoints();
-                    _startRoom = room;
-                    _generatedDung.Add(room);
-                    break;
+                    if (!spawnPoint.IsSpawnPointEngaged && spawnPoint.IsAbleToSpawn)
+                    {
+                        wrongRooms.Add(room);
+                        break;
+                    }
                 }
             }
 
-            Instantiate(_startRoom.gameObject, Vector3.zero, Quaternion.identity);
+            foreach (Room wrongRoom in wrongRooms)
+            {
+                Debug.Log($"{wrongRoom.name}");
+            }
+
+            RespawnRoom(wrongRooms);
+        }
+
+        private void RespawnRoom(List<Room> wrongRooms)
+        {
+            foreach (Room wrongRoom in wrongRooms)
+            {
+                SpawnPoint spawnPoint = new();
+                Room connectedRoom = null;
+
+                foreach (SpawnPoint roomSpawnPoint in wrongRoom.SpawnPoints)
+                {
+                    if (roomSpawnPoint.IsAbleToSpawn && roomSpawnPoint.IsSpawnPointEngaged)
+                    {
+                        spawnPoint = roomSpawnPoint;
+                        connectedRoom = spawnPoint.ConnectedRoom;
+                        break;
+                    }
+                }
+
+                Room oneDoorRoom = FindOneDoorRoom(spawnPoint);
+                
+                Debug.Log($"New room: {oneDoorRoom.name}");
+
+                foreach (SpawnPoint roomSpawnPoint in oneDoorRoom.SpawnPoints)
+                {
+                    if (roomSpawnPoint.SpawnPointTag == spawnPoint.SpawnPointTag)
+                    {
+                        roomSpawnPoint.SetConnectedRoom(connectedRoom);
+                    }
+                }
+
+                int wrongRoomIndex = _generatedDung.IndexOf(wrongRoom);
+                Vector2 wrongRoomPosition = wrongRoom.transform.position;
+                _generatedDung.Remove(wrongRoom);
+                Destroy(wrongRoom.gameObject);
+                Room instantiate = Instantiate(oneDoorRoom, wrongRoomPosition, Quaternion.identity);
+                _generatedDung.Insert(wrongRoomIndex, instantiate);
+                
+                
+                Debug.Log($"Replaced");
+            }
+        }
+
+        private Room FindOneDoorRoom(SpawnPoint spawnPoint)
+        {
+            Room roomWithOneDoor = null;
+
+            switch (spawnPoint.SpawnPointTag)
+            {
+                case "TopDot":
+                    roomWithOneDoor = GetRoomWithOneDoor(_roomsWithTopDoor);
+                    break;
+                case "BottomDot":
+                    roomWithOneDoor = GetRoomWithOneDoor(_roomsWithBottomDoor);
+                    break;
+                case "LeftDot":
+                    roomWithOneDoor = GetRoomWithOneDoor(_roomsWithLeftDoor);
+                    break;
+                case "RightDot":
+                    roomWithOneDoor = GetRoomWithOneDoor(_roomsWithRightDoor);
+                    break;
+            }
+
+            return roomWithOneDoor;
+        }
+
+        private Room GetRoomWithOneDoor(List<Room> rooms)
+        {
+            foreach (Room room in rooms)
+            {
+                if (room.tag.Equals("OneDoorRoom"))
+                {
+                    return room;
+                }
+            }
+
+            return null;
         }
 
         private int GetRandomIndexFromZeroToThree()

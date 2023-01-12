@@ -8,7 +8,7 @@ namespace RogueLike.Room
         [SerializeField] private List<SpawnPoint> _spawnPoints;
         [Range(0, 3)]
         [SerializeField] private int _roomTier;
-        
+
         [SerializeField] private Transform _startSpawnTransform;
         [SerializeField] private Transform _endSpawnTransform;
 
@@ -16,6 +16,29 @@ namespace RogueLike.Room
         public int RoomTier => _roomTier;
         public float RoomOffsetX { get; set; }
         public float RoomOffsetY { get; set; }
+        
+        public void SetSpawnPointEngaged(SpawnPoint spawnPoint, Room room)
+        {
+            string oppositeTagName = GetOppositeTagName(spawnPoint);
+
+            foreach (SpawnPoint point in _spawnPoints)
+            {
+                if (point.SpawnPointTag == oppositeTagName)
+                {
+                    point.SetSpawnPointEngaged(true);
+                    point.SetConnectedRoom(room);
+                }
+            }
+        }
+
+        public void ResetSpawnPoints()
+        {
+            foreach (SpawnPoint spawnPoint in _spawnPoints)
+            {
+                spawnPoint.SetSpawnPointEngaged(false);
+            }
+        }
+        
         
 
         private string GetOppositeTagName(SpawnPoint spawnPoint)
@@ -38,34 +61,6 @@ namespace RogueLike.Room
             }
 
             return oppositeTag;
-        }
-
-        public void SetSpawnPointEngaged(SpawnPoint spawnPoint, Room room)
-        {
-            string oppositeTagName = GetOppositeTagName(spawnPoint);
-
-            foreach (SpawnPoint point in _spawnPoints)
-            {
-                if (point.SpawnPointTag == oppositeTagName)
-                {
-                    point.SetSpawnPointEngaged(true);
-                    point.SetConnectedRoom(room);
-                }
-            }
-        }
-
-        public void ResetSpawnPoints()
-        {
-            foreach (SpawnPoint spawnPoint in _spawnPoints)
-            {
-                spawnPoint.SetSpawnPointEngaged(false);
-            }
-        }
-
-        public void ResetRoomOffset()
-        {
-            RoomOffsetX = 0;
-            RoomOffsetY = 0;
         }
     }
 }
