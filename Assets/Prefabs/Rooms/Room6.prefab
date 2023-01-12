@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 8608677336503343055}
   - component: {fileID: 4946270210969602041}
   - component: {fileID: -6935699049763137749}
-  m_Layer: 14
+  m_Layer: 16
   m_Name: Room6
   m_TagString: TwoDoorRoom
   m_Icon: {fileID: 0}
