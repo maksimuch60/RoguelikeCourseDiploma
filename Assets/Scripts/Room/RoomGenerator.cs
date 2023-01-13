@@ -42,10 +42,7 @@ namespace RogueLike.Room
             _allRooms.Add(_roomsWithRightDoor);
             _allRooms.Add(_roomsWithTopDoor);
             _allRooms.Add(_roomsWithBottomDoor);
-        }
-
-        private void Start()
-        {
+            
             Generate();
         }
 
@@ -176,8 +173,13 @@ namespace RogueLike.Room
             GameObject roomInstance =
                 Instantiate(randomRoom.gameObject, spawnPoint.SpawnPointTransform.position, Quaternion.identity);
             Room connectedRoom = roomInstance.GetComponent<Room>();
+            
             spawnPoint.SetConnectedRoom(connectedRoom);
             connectedRoom.SetSpawnPointEngaged(spawnPoint, room);
+
+            room.SetRoomToDoor(connectedRoom, spawnPoint, false);
+            connectedRoom.SetRoomToDoor(room, spawnPoint, true);
+            
             _roomsSpawned++;
             return connectedRoom;
         }
@@ -214,11 +216,6 @@ namespace RogueLike.Room
                 }
             }
 
-            foreach (Room wrongRoom in wrongRooms)
-            {
-                Debug.Log($"{wrongRoom.name}");
-            }
-
             RespawnRoom(wrongRooms);
         }
 
@@ -240,15 +237,14 @@ namespace RogueLike.Room
                 }
 
                 Room oneDoorRoom = FindOneDoorRoom(spawnPoint);
-                
-                Debug.Log($"New room: {oneDoorRoom.name}");
 
                 foreach (SpawnPoint roomSpawnPoint in oneDoorRoom.SpawnPoints)
                 {
                     if (roomSpawnPoint.SpawnPointTag == spawnPoint.SpawnPointTag)
                     {
                         roomSpawnPoint.SetConnectedRoom(connectedRoom);
-                        
+                        oneDoorRoom.SetRoomToDoor(connectedRoom, spawnPoint, false);
+                        break;
                     }
                 }
 
@@ -258,11 +254,11 @@ namespace RogueLike.Room
                 Destroy(wrongRoom.gameObject);
                 Room instantiate = Instantiate(oneDoorRoom, wrongRoomPosition, Quaternion.identity);
                 if (connectedRoom != null)
+                {
                     connectedRoom.SetSpawnPointEngaged(spawnPoint, instantiate);
+                    connectedRoom.SetRoomToDoor(oneDoorRoom, spawnPoint, true);
+                }
                 _generatedDung.Insert(wrongRoomIndex, instantiate);
-                
-                
-                Debug.Log($"Replaced");
             }
         }
 

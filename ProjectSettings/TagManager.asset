@@ -19,6 +19,10 @@ TagManager:
   - ThreeDoorRoom
   - TwoDoorRoom
   - OneDoorRoom
+  - LeftDoor
+  - TopDoor
+  - RightDoor
+  - BottomDoor
   layers:
   - Default
   - TransparentFX
@@ -38,9 +42,9 @@ TagManager:
   - EnemyShield
   - Room
   - RoomSpawnPoint
-  - 
-  - 
-  - 
+  - Door
+  - TransitionZone
+  - Wall
   - 
   - 
   - 
