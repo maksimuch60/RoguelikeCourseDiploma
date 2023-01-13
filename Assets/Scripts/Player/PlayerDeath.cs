@@ -10,7 +10,7 @@ namespace RogueLike
         [SerializeField] private PlayerHp _playerHp;
         [SerializeField] private PlayerAnimation _playerAnimation;
         [SerializeField] private PlayerAttack _playerAttack;
-        [SerializeField] private PlayerMovement _playerMovement; 
+        [SerializeField] private PlayerMovement _playerMovement;
 
         #endregion
 
@@ -18,6 +18,7 @@ namespace RogueLike
         #region Properties
 
         public bool IsDead { get; private set; }
+        public bool IsAnimationPlayed = false; 
 
         #endregion
 
@@ -26,7 +27,7 @@ namespace RogueLike
 
         private void Start()
         {
-            _playerHp.OnChanged += OnHpChanged; 
+            _playerHp.OnChanged += OnHpChanged;
         }
 
         #endregion
@@ -42,8 +43,9 @@ namespace RogueLike
             IsDead = true;
             Debug.Log("Player died");
             _playerAnimation.PlayDeath();
+            IsAnimationPlayed = true; 
             _playerMovement.enabled = false;
-            _playerAttack.enabled = false; 
+            _playerAttack.enabled = false;
         }
 
         #endregion

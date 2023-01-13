@@ -10,7 +10,8 @@ namespace RogueLike
         public event Action<bool> OnPaused;
 
         #endregion
-    
+
+
         #region Properties
 
         public bool IsPaused { get; private set; }
@@ -39,18 +40,15 @@ namespace RogueLike
             Time.timeScale = 1;
             OnPaused?.Invoke(IsPaused);
         }
+
         #endregion
 
 
-        #region Private methods 
-
-        private void TogglePause()
+        public void TogglePause()
         {
             IsPaused = !IsPaused;
             Time.timeScale = IsPaused ? 0 : 1;
             OnPaused?.Invoke(IsPaused);
         }
-
-        #endregion
     }
 }
