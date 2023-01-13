@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1907383835}
   - component: {fileID: 1907383836}
   - component: {fileID: 5536156384635211794}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: UnsafeZone
-  m_TagString: Untagged
+  m_TagString: EnemyAgroTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,11 +326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHp: {fileID: 0}
   _damage: 0
-  _attackPoint: {fileID: 0}
-  _radius: 0
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   _attacksInfo:
   - SpecialEffectAttack: {fileID: 605737875}
   - SpecialEffectAttack: {fileID: 6350129899065079597}
@@ -349,11 +344,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHp: {fileID: 0}
   _damage: 33
-  _attackPoint: {fileID: 0}
-  _radius: 2
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   _fireDelay: 3
   _enemyBulletPrefab: {fileID: 2826451815554099487, guid: eca0a19999a16b14a86e047cb0a61955, type: 3}
   _player: {fileID: 0}
@@ -368,7 +358,7 @@ GameObject:
   - component: {fileID: 5352185522162420340}
   m_Layer: 7
   m_Name: Cosmetic
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

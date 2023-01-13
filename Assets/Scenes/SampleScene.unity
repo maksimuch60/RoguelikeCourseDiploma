@@ -3257,7 +3257,7 @@ GameObject:
   - component: {fileID: 1981723819}
   - component: {fileID: 1981723818}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: 'BackgroundSound '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3543,13 +3543,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581174066, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2057576801, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: _playerHp
       value: 
       objectReference: {fileID: 2088877471}
+    - target: {fileID: 2057576801, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_Name
       value: EnemyArcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8967444361591388031, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
       propertyPath: m_RootOrder
@@ -3656,6 +3668,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8643599380404833484, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
 --- !u!1001 &7832228699582580449
@@ -3665,6 +3681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4756258230519857978, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
+      propertyPath: _playerHp
+      value: 
+      objectReference: {fileID: 2088877471}
     - target: {fileID: 7832228698562643708, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3712,6 +3732,10 @@ PrefabInstance:
     - target: {fileID: 7832228698562643709, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
       propertyPath: m_Name
       value: WarriorOrc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832228698562643709, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e63e3a812ffe854ebe88d1e828e97d0, type: 3}

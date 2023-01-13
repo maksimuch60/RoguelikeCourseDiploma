@@ -8,9 +8,6 @@ namespace RogueLike
         protected float Timer;
         [SerializeField] protected PlayerHp _playerHp; 
         [SerializeField] protected int _damage;
-        [SerializeField] protected Transform _attackPoint;
-        [SerializeField] protected float _radius;
-        [SerializeField] protected LayerMask _layerMask;
 
         protected bool CanAttack()
         {

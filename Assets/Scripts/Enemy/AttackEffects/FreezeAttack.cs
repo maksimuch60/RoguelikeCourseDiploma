@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using RogueLike.Player;
 using UnityEngine;
 
 namespace RogueLike

@@ -7,6 +7,10 @@ namespace RogueLike
     {
         [SerializeField] private EnemyAnimation _animation;
         private float _fireDelay = 0.7f;
+        
+        [SerializeField] protected Transform _attackPoint;
+        [SerializeField] protected float _radius;
+        [SerializeField] protected LayerMask _layerMask;
 
         private void Update()
         {

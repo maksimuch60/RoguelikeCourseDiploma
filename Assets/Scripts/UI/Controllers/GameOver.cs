@@ -16,16 +16,15 @@ namespace RogueLike
 
         private void Update()
         {
+            Debug.Log($"Time scale is: {Time.timeScale}");
             if (_playerHp.CurrentHp <= 0 && _playerAnimation.IsAnimationPlayed)
             {
+                _playerAnimation.IsAnimationPlayed = false; 
                 _gameOverScreen.SetActive(true);
-                StopTime();
+                Time.timeScale = 0; 
+                
             }
         }
-
-        private void StopTime()
-        {
-            Time.timeScale = 0;
-        }
+        
     }
 }
