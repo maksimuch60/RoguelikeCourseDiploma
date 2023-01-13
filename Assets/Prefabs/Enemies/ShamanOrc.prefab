@@ -239,11 +239,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5543099476381220106}
-  - component: {fileID: 605737873}
   - component: {fileID: 605737875}
   - component: {fileID: 6350129899065079597}
   - component: {fileID: 7806704379056209264}
   - component: {fileID: 605737876}
+  - component: {fileID: 850824802}
   m_Layer: 7
   m_Name: Weapon
   m_TagString: Enemy
@@ -267,21 +267,6 @@ Transform:
   m_Father: {fileID: 733057774001776017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &605737873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215685504463838817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04d30ae522b84579a2bc437468f0d3f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fireDelay: 1.2
-  _enemyBulletPrefab: {fileID: 2826451815554099487, guid: eca0a19999a16b14a86e047cb0a61955, type: 3}
-  _player: {fileID: 0}
 --- !u!114 &605737875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,10 +324,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff575aad425e432e8d8a78aa5c78b6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHp: {fileID: 0}
+  _damage: 0
+  _attackPoint: {fileID: 0}
+  _radius: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _attacksInfo:
   - SpecialEffectAttack: {fileID: 605737875}
   - SpecialEffectAttack: {fileID: 6350129899065079597}
   - SpecialEffectAttack: {fileID: 7806704379056209264}
+--- !u!114 &850824802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215685504463838817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d30ae522b84579a2bc437468f0d3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHp: {fileID: 0}
+  _damage: 33
+  _attackPoint: {fileID: 0}
+  _radius: 2
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _fireDelay: 3
+  _enemyBulletPrefab: {fileID: 2826451815554099487, guid: eca0a19999a16b14a86e047cb0a61955, type: 3}
+  _player: {fileID: 0}
 --- !u!1 &5888944313748587965
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8296592599847588909
 Transform:
   m_ObjectHideFlags: 0

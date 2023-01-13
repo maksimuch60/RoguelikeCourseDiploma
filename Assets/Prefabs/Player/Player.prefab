@@ -85,8 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec722712b824aa1b4294637efb924ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startHp: 1000
-  _maxHp: 1000
+  _startHp: 100
+  _maxHp: 100
+  _healthBar: {fileID: 0}
 --- !u!58 &7579694251407362101
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   _playerAnimation: {fileID: 898850934}
   _playerAttack: {fileID: 4783201293992610548}
   _playerMovement: {fileID: 4783201294106756915}
+  IsAnimationPlayed: 0
 --- !u!1 &4783201294582465182
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 4783201294582465181}
+  IsAnimationPlayed: 0
 --- !u!1001 &4802824084865750137
 PrefabInstance:
   m_ObjectHideFlags: 0

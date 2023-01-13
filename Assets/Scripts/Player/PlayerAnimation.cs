@@ -5,12 +5,18 @@ namespace RogueLike
     public class PlayerAnimation : MonoBehaviour
     {
         [SerializeField] private Animator _animator;
+
+        public bool IsAnimationPlayed = false; 
         
         private static readonly int Death = Animator.StringToHash("Death");
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int Freeze = Animator.StringToHash("Freeze");
         private static readonly int InFire = Animator.StringToHash("InFire");
 
+        private bool SetIsAnimationPlayed()
+        {
+            return IsAnimationPlayed = true; 
+        }
         public void PlayDeath()
         {
             _animator.SetTrigger(Death);
@@ -23,7 +29,7 @@ namespace RogueLike
 
         public void Freezed()
         {
-            _animator.SetTrigger(Freeze); 
+            _animator.SetTrigger(Freeze);
         }
 
         public void Fire()

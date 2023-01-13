@@ -10,14 +10,7 @@ TagManager:
   - EnemyAttackZone
   - EnemyAgroTrigger
   - PlayerWeapon
-  - FourDoorRoom
-  - BottomDot
-  - TopDot
-  - LeftDot
-  - RightDot
-  - ThreeDoorRoom
-  - TwoDoorRoom
-  - OneDoorRoom
+  - Pause
   layers:
   - Default
   - TransparentFX
@@ -35,8 +28,8 @@ TagManager:
   - EnemyAttackZone
   - PlayerWeapon
   - EnemyShield
-  - Room
-  - RoomSpawnPoint
+  - 
+  - 
   - 
   - 
   - 

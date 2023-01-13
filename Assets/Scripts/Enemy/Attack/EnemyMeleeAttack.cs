@@ -6,10 +6,6 @@ namespace RogueLike
     public class EnemyMeleeAttack : EnemyAttack
     {
         [SerializeField] private EnemyAnimation _animation;
-        [SerializeField] private int _damage;
-        [SerializeField] private Transform _attackPoint;
-        [SerializeField] private float _radius;
-        [SerializeField] private LayerMask _layerMask;
         private float _fireDelay = 0.7f;
 
         private void Update()
@@ -29,11 +25,10 @@ namespace RogueLike
                 _animation.StopPlayAttack();
                 return;
             }
-            
-            PlayerHp playerHp = col.GetComponentInParent<PlayerHp>();
-            if (playerHp != null)
+
+            if (_playerHp != null)
             {
-                playerHp.ApplyDamage(_damage);
+                _playerHp.ApplyDamage(_damage);
                 _animation.StartPlayAttack();
             }
         }
