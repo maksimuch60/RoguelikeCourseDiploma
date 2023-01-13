@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7305027688995425040}
   - component: {fileID: 1905043784989489772}
-  m_Layer: 13
+  m_Layer: 17
   m_Name: LeftDot
   m_TagString: LeftDot
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6010760513816327845}
   - component: {fileID: 3055730298712540520}
-  m_Layer: 13
+  m_Layer: 17
   m_Name: RightDot
   m_TagString: RightDot
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5144296709384002154}
   - component: {fileID: 5287123387647379553}
-  m_Layer: 13
+  m_Layer: 17
   m_Name: TopDot
   m_TagString: TopDot
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4398139334796094147}
   - component: {fileID: 8744721904588714473}
-  m_Layer: 13
+  m_Layer: 17
   m_Name: BottomDot
   m_TagString: BottomDot
   m_Icon: {fileID: 0}
