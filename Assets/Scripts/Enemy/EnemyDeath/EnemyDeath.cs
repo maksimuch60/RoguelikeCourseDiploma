@@ -1,4 +1,5 @@
-﻿using RogueLike.Animations;
+﻿using System;
+using RogueLike.Animations;
 using UnityEngine;
 
 namespace RogueLike
@@ -10,9 +11,13 @@ namespace RogueLike
         [SerializeField] public EnemyAnimation _enemyAnimation;
         [SerializeField] protected EnemyHp _enemyHp;
         [SerializeField] protected EnemyMovement _enemyMovement;
+        [SerializeField] protected Collider2D _collider2D;
+        
 
         #endregion
 
+
+        public Action<EnemyDeath> OnDead;
 
         #region Properties
 

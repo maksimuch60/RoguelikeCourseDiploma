@@ -6,6 +6,10 @@ namespace RogueLike
     public class EnemyMeleeAttack : EnemyAttack
     {
         [SerializeField] private EnemyAnimation _animation;
+        [SerializeField] protected Transform _attackPoint;
+        [SerializeField] protected float _radius;
+        [SerializeField] protected LayerMask _layerMask;
+        
         private float _fireDelay = 0.7f;
 
         private void Update()

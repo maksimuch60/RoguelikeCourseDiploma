@@ -6,10 +6,8 @@ namespace RogueLike
 {
     public class Blindness : SpecialEffectAttack
     {
-        [SerializeField] private Image _blindZone;
-
         [SerializeField] private int _durationBeforeExit = 5; 
-
+        
         private void OnEnable()
         {
             _blindZone.enabled = true;

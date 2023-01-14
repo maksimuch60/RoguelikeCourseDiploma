@@ -10,6 +10,7 @@ namespace RogueLike
         protected void MoveToNextScene()
         {
             SceneManager.LoadScene(_sceneIndex);
+            Time.timeScale = 1;
         }
 
         protected void Exit()
@@ -22,6 +23,7 @@ namespace RogueLike
         public void Restart()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1;
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace RogueLike.Game
 {
@@ -7,7 +9,11 @@ namespace RogueLike.Game
     {
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private List<GameObject> _enemyPrefabs;
-        
+
+        private int _enemyCounter;
+
+        public int EnemyCounter => _enemyCounter;
+
         public void SpawnPlayer(Room.Room room)
         {
             Vector3 roomCenterPosition = (room.StartSpawnTransform.position + room.EndSpawnTransform.position) * 0.5f;
@@ -19,10 +25,19 @@ namespace RogueLike.Game
             for (int i = 0; i < enemyAmount; i++)
             {
                 int randomIndex = Random.Range(0, _enemyPrefabs.Count);
-                Instantiate(_enemyPrefabs[randomIndex], 
+                GameObject instantiate = Instantiate(_enemyPrefabs[randomIndex], 
                     GetRandomPosition(room.StartSpawnTransform.position, room.EndSpawnTransform.position), 
                     Quaternion.identity);
+                _enemyCounter++;
+                EnemyDeath enemyDeath = instantiate.GetComponent<EnemyDeath>();
+                enemyDeath.OnDead += DecrementEnemyCounter;
             }
+        }
+
+        private void DecrementEnemyCounter(EnemyDeath enemyDeath)
+        {
+            _enemyCounter--;
+            enemyDeath.OnDead -= DecrementEnemyCounter;
         }
 
         private Vector3 GetRandomPosition(Vector3 startSpawnPosition, Vector3 endSpawnPosition)

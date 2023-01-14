@@ -6,14 +6,8 @@ namespace RogueLike
 {
     public class FreezeAttack : SpecialEffectAttack
     {
-        [SerializeField] private PlayerAnimation _playerAnimation; 
-        
-        [SerializeField] private PlayerMovement _playerMovement;
-
         [SerializeField] private float _defaultSpeed = 10;
-
         [SerializeField] private float _freezeSpeed;
-
         [SerializeField] private int _duration = 5;
 
         private int _fireDelay = 2;

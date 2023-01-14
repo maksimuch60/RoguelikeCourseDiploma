@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 55827922086485646}
   - component: {fileID: 55827922086485647}
   - component: {fileID: 55827922086485645}
-  m_Layer: 6
+  - component: {fileID: 1468605486}
+  m_Layer: 14
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: -1200038259, guid: 8da41e890b57b024e9be901d98bc0930, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,6 +116,19 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 2991544698030284300, guid: 801a95307be01ee40922c3c3d8ebef87, type: 3}
   _bulletSpawnPositionTransform: {fileID: 55827923056840059}
   _fireDelay: 0.3
+--- !u!114 &1468605486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55827922086485641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a13872eee84c83b21c656ece0605d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aimPosition: {fileID: 0}
 --- !u!1 &55827923548059216
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 55827923056840059}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: BulletSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -156,6 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3677749835587391004}
   - component: {fileID: 5091603527721067454}
+  - component: {fileID: 806494486}
   m_Layer: 8
   m_Name: AimZone
   m_TagString: Untagged
@@ -194,3 +209,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 9
+--- !u!114 &806494486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842473010213427381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87147fbf60204cf0ad13933922b26499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoAim: {fileID: 1468605486}
+  _aim: {fileID: 0}

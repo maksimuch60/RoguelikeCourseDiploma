@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace RogueLike
 {
@@ -8,6 +9,8 @@ namespace RogueLike
         [SerializeField] private PlayerAnimation _playerAnimation;
         [SerializeField] private GameObject _gameOverScreen;
         private Animation _animation;
+        
+        private bool _isPlayerFollowSet;
 
         private void Awake()
         {
@@ -16,16 +19,20 @@ namespace RogueLike
 
         private void Update()
         {
+            if (!_isPlayerFollowSet && FindObjectOfType<PlayerHp>()!= null)
+            {
+                
+                _playerAnimation = FindObjectOfType<PlayerAnimation>();
+                _playerHp = FindObjectOfType<PlayerHp>();
+                _isPlayerFollowSet = true;
+            }
+            
             if (_playerHp.CurrentHp <= 0 && _playerAnimation.IsAnimationPlayed)
             {
+                _playerAnimation.IsAnimationPlayed = false;
                 _gameOverScreen.SetActive(true);
-                StopTime();
+                Time.timeScale = 0;
             }
-        }
-
-        private void StopTime()
-        {
-            Time.timeScale = 0;
         }
     }
 }

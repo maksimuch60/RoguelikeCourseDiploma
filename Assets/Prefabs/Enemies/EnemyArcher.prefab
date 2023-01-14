@@ -162,11 +162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHp: {fileID: 0}
   _damage: 10
-  _attackPoint: {fileID: 0}
-  _radius: 0
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   _fireDelay: 3
   _enemyBulletPrefab: {fileID: 1233653146994486253, guid: fd52d48f0acbd1c45bb5962890105396, type: 3}
   _player: {fileID: 0}
@@ -543,6 +538,7 @@ MonoBehaviour:
   _enemyAnimation: {fileID: 5319432575450015434}
   _enemyHp: {fileID: 7184796396103964314}
   _enemyMovement: {fileID: 2287159838325095634}
+  _collider2D: {fileID: 1581174066}
   _archerCosmetics:
   - {fileID: 3219133389153545719}
   - {fileID: 8474028555602539592}

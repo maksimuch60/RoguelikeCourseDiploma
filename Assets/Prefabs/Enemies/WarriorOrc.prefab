@@ -525,6 +525,7 @@ MonoBehaviour:
   _enemyAnimation: {fileID: 7671983265474938956}
   _enemyHp: {fileID: 7122027762185425561}
   _enemyMovement: {fileID: 474749614088664372}
+  _collider2D: {fileID: 8103468878472279832}
   _orcCosmetics:
   - {fileID: 7832228698069569362}
   - {fileID: 7832228698064825105}
@@ -773,12 +774,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHp: {fileID: 0}
   _damage: 1
+  _animation: {fileID: 7671983265474938956}
   _attackPoint: {fileID: 955726091041020561}
   _radius: 1
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
-  _animation: {fileID: 7671983265474938956}
 --- !u!1 &8482213175942836198
 GameObject:
   m_ObjectHideFlags: 0

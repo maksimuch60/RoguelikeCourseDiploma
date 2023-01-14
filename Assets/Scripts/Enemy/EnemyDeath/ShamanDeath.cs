@@ -11,7 +11,10 @@ namespace RogueLike
         {
             if (IsDead || hp > 0)
                 return;
-            IsDead = true; 
+            
+            OnDead?.Invoke(this);
+            IsDead = true;
+            _collider2D.enabled = false;
             _shamanModel.enabled = false;
             _enemyHp.enabled = false;
             _enemyMovement.enabled = false;

@@ -13,8 +13,10 @@ namespace RogueLike.Game
         [SerializeField] private CameraMover _cameraMover;
 
         private List<Room.Room> _generatedDung;
-        private Room.Room _currentRoom;
+        private Room.Room _currentRoom; 
         private bool _firstInit = true;
+        private bool _isBattle;
+        private bool _isPerform;
 
         public void Construct(List<Room.Room> generatedDung)
         {
@@ -32,6 +34,17 @@ namespace RogueLike.Game
             {
                 FirstInit();
             }
+
+            if (_spawner.EnemyCounter == 0 && !_isPerform)
+            {
+                _isBattle = false;
+            }
+
+            if (!_isBattle)
+            {
+                _isPerform = true;
+                _currentRoom.OpenDoors();
+            }
         }
 
         private void OnDestroy()
@@ -47,11 +60,10 @@ namespace RogueLike.Game
 
         private void RoomInit(Room.Room room)
         {
-            foreach (Door roomDoor in room.Doors)
-            {
-                roomDoor.CloseDoor();
-            }
+            _currentRoom.CloseDoors();
             _spawner.EnemySpawn(room, Random.Range(3, 6));
+            _isBattle = true;
+            _isPerform = false;
         }
 
         private void FirstInit()
