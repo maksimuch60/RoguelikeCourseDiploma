@@ -10,7 +10,7 @@ namespace RogueLike.Objects
         public void SetTarget(Room.Room room)
         {
             Transform roomTransform = room.transform;
-            _virtualCamera.LookAt = roomTransform;
+            //_virtualCamera.LookAt = roomTransform;
             _virtualCamera.Follow = roomTransform;
         }
     }

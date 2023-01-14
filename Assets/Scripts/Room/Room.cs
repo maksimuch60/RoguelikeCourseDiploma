@@ -15,9 +15,12 @@ namespace RogueLike.Room
         [SerializeField] private Transform _endSpawnTransform;
 
         public List<SpawnPoint> SpawnPoints => _spawnPoints;
+        public List<Door> Doors => _doors;
         public int RoomTier => _roomTier;
         public float RoomOffsetX { get; set; }
         public float RoomOffsetY { get; set; }
+        public Transform StartSpawnTransform => _startSpawnTransform;
+        public Transform EndSpawnTransform => _endSpawnTransform;
 
         public void SetSpawnPointEngaged(SpawnPoint spawnPoint, Room room)
         {

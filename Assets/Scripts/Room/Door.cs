@@ -13,11 +13,14 @@ namespace RogueLike.Room
         private Vector3 _leftSpawnOffset = new(2, 0, 0);
         private Vector3 _rightSpawnOffset = new(-2, 0, 0);
 
+        public event Action<Room> OnEnter; 
+
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
             {
                 _connectedRoom.TransitToRoom(this, col.gameObject);
+                OnEnter?.Invoke(_connectedRoom);
             }
         }
 

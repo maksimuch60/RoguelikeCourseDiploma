@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using RogueLike.Game;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,6 +21,8 @@ namespace RogueLike.Room
 
         [Range(3, 6)]
         [SerializeField] private int _generationDeep;
+
+        [SerializeField] private Level _level;
 
         private readonly List<Room> _generatedDung = new();
         private readonly List<List<Room>> _allRooms = new();
@@ -44,6 +47,11 @@ namespace RogueLike.Room
             _allRooms.Add(_roomsWithBottomDoor);
             
             Generate();
+        }
+
+        private void Start()
+        {
+            _level.Construct(_generatedDung);
         }
 
         private void Generate()

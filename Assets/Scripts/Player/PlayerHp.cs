@@ -15,14 +15,14 @@ namespace RogueLike
         private void Awake()
         {
             CurrentHp = _startHp;
-            _healthBar.SetMaxHealth(MaxHp);
+            //_healthBar.SetMaxHealth(MaxHp);
             OnChanged?.Invoke(CurrentHp);
         }
 
         public void ApplyDamage(int damage)
         {
             CurrentHp = Mathf.Max(0, CurrentHp - damage);
-            _healthBar.SetHealth(CurrentHp);
+            //_healthBar.SetHealth(CurrentHp);
             OnChanged?.Invoke(CurrentHp);
         }
     }
