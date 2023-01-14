@@ -13,12 +13,12 @@ namespace RogueLike
             
             OnDead?.Invoke(this);
             IsDead = true;
-            _collider2D.enabled = false;
             _enemyHp.enabled = false;
             _enemyMovement.enabled = false;
             _enemyAnimation.PlayDeath();
             foreach (GameObject orcCosmetic in _orcCosmetics)
                 Destroy(orcCosmetic);
+            _collider2D.enabled = false;
         }
     }
 }

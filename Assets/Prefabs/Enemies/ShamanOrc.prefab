@@ -279,6 +279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2653f52a9a7460285deca311043ad0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHp: {fileID: 0}
+  _blindZone: {fileID: 0}
   _playerAnimation: {fileID: 0}
   _playerMovement: {fileID: 0}
   _defaultSpeed: 10
@@ -296,9 +298,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544f0560943e4d11bc29e5485e04bcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHp: {fileID: 0}
+  _blindZone: {fileID: 0}
   _playerAnimation: {fileID: 0}
   _playerMovement: {fileID: 0}
-  _playerHp: {fileID: 0}
 --- !u!114 &7806704379056209264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,9 +314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed79c9578e104c54aab628cbcd18bf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHp: {fileID: 0}
+  _blindZone: {fileID: 3730081871803441518, guid: 892e880ff2bc59e4780872cf8defce28, type: 3}
   _playerAnimation: {fileID: 0}
   _playerMovement: {fileID: 0}
-  _blindZone: {fileID: 3730081871803441518, guid: 892e880ff2bc59e4780872cf8defce28, type: 3}
   _durationBeforeExit: 5
 --- !u!114 &605737876
 MonoBehaviour:
@@ -669,7 +673,8 @@ MonoBehaviour:
   _enemyAnimation: {fileID: 1974815529566352946}
   _enemyHp: {fileID: 8620475807582559960}
   _enemyMovement: {fileID: 8205577749919999283}
-  _shamanModel: {fileID: 8296592599984877649}
+  _collider2D: {fileID: 8296592599984877649}
+  _collider2D: {fileID: 8296592599984877649}
   _shamanCosmetics:
   - {fileID: 6611014189564518666}
   - {fileID: 6228150838621147196}

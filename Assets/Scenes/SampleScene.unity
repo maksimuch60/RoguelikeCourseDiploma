@@ -3232,6 +3232,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 363131909}
+    - target: {fileID: 1895640431224654409, guid: 0651f0da24ae1b84d9d953f57cbcd956, type: 3}
+      propertyPath: _generationDeep
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1895640431224654410, guid: 0651f0da24ae1b84d9d953f57cbcd956, type: 3}
       propertyPath: m_RootOrder
       value: 7
