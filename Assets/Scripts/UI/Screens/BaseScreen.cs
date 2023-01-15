@@ -6,11 +6,12 @@ namespace RogueLike
 {
     public class BaseScreen : MonoBehaviour
     {
-        [SerializeField] private int _sceneIndex; 
+        [SerializeField] private int _sceneIndex;
+
         protected void MoveToNextScene()
         {
             SceneManager.LoadScene(_sceneIndex);
-            Time.timeScale = 1;
+            Time.timeScale = 1; 
         }
 
         protected void Exit()
@@ -19,11 +20,11 @@ namespace RogueLike
             EditorApplication.isPlaying = false;
 #endif
         }
-        
-        public void Restart()
+
+        protected void Restart()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 1; 
         }
     }
 }

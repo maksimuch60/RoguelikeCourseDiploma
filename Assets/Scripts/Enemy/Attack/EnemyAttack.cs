@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RogueLike
 {
@@ -9,11 +8,6 @@ namespace RogueLike
         protected float Timer;
         [SerializeField] protected PlayerHp _playerHp; 
         [SerializeField] protected int _damage;
-
-        private void Start()
-        {
-            _playerHp = FindObjectOfType<PlayerHp>();
-        }
 
         protected bool CanAttack()
         {
