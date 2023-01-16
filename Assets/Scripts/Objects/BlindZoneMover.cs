@@ -25,6 +25,7 @@ namespace RogueLike
                 SetFollowPlayer();
                 _isPlayerFollowSet = true;
             }
+            
             Vector3 followPosition = _camera.WorldToScreenPoint(_followPlayer.position);
             followPosition.z = _cachedTransform.position.z;
             _cachedTransform.position = followPosition;
