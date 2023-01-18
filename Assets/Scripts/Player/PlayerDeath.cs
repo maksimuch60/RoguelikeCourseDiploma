@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RogueLike.Player;
+using UnityEngine;
 
 namespace RogueLike
 {

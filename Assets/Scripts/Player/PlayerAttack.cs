@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace RogueLike
+namespace RogueLike.Player
 {
     public class PlayerAttack : MonoBehaviour
     {
