@@ -29,6 +29,7 @@ namespace RogueLike.Game
                     GetRandomPosition(room.StartSpawnTransform.position, room.EndSpawnTransform.position), 
                     Quaternion.identity);
                 _enemyCounter++;
+                
                 EnemyDeath enemyDeath = instantiate.GetComponent<EnemyDeath>();
                 enemyDeath.OnDead += DecrementEnemyCounter;
             }

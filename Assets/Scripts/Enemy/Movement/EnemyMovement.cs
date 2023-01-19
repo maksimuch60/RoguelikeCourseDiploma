@@ -6,7 +6,7 @@ namespace RogueLike
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class EnemyMovement : MonoBehaviour
     {
-        [SerializeField] private EnemyAnimation _enemyAnimation; 
+        [SerializeField] private EnemyAnimation _enemyAnimation;
         [SerializeField] protected float _speed = 4;
         [SerializeField] protected Transform _target;
 
@@ -42,7 +42,6 @@ namespace RogueLike
         }
 
         internal abstract bool IsTargetValid();
-       
 
         protected abstract void MovementRelativeToThePlayer();
 

@@ -35,7 +35,7 @@ namespace RogueLike
             SetVelocity(-direction * _speed);
         }
 
-        IEnumerator WaitBeforeClose()
+        private IEnumerator WaitBeforeClose()
         {
             yield return new WaitForSeconds(10); 
         }
