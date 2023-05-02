@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,6 +103,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1126,9 +1138,9 @@ TextureImporter:
       players blue x2_1: 837233925
       players blue x2_38: -933786746
       players blue x2_51: -1584940052
+      players blue x2_50: 1143326878
       players blue x2_22: 265441477
       players blue x2_34: 1231863861
-      players blue x2_50: 1143326878
       players blue x2_6: 1660453646
       players blue x2_27: 2086188736
       players blue x2_40: -1079607740
