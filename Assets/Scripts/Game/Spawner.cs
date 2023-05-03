@@ -7,12 +7,20 @@ namespace RogueLike.Game
 {
     public class Spawner : MonoBehaviour
     {
+        [SerializeField] private ChooseCharacter _chooseCharacter;
+
+        [Header("Prefabs")]
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private List<GameObject> _enemyPrefabs;
 
         private int _enemyCounter;
 
         public int EnemyCounter => _enemyCounter;
+
+        private void Awake()
+        {
+            SetPlayer(_chooseCharacter._playerPrefab);
+        }
 
         public void SpawnPlayer(Room.Room room)
         {
@@ -25,14 +33,19 @@ namespace RogueLike.Game
             for (int i = 0; i < enemyAmount; i++)
             {
                 int randomIndex = Random.Range(0, _enemyPrefabs.Count);
-                GameObject instantiate = Instantiate(_enemyPrefabs[randomIndex], 
-                    GetRandomPosition(room.StartSpawnTransform.position, room.EndSpawnTransform.position), 
+                GameObject instantiate = Instantiate(_enemyPrefabs[randomIndex],
+                    GetRandomPosition(room.StartSpawnTransform.position, room.EndSpawnTransform.position),
                     Quaternion.identity);
                 _enemyCounter++;
-                
+
                 EnemyDeath enemyDeath = instantiate.GetComponent<EnemyDeath>();
                 enemyDeath.OnDead += DecrementEnemyCounter;
             }
+        }
+
+        private void SetPlayer(GameObject playerPrefab)
+        {
+            _playerPrefab = playerPrefab;
         }
 
         private void DecrementEnemyCounter(EnemyDeath enemyDeath)
