@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,7 +6,7 @@ namespace RogueLike.Game
 {
     public class Spawner : MonoBehaviour
     {
-        [SerializeField] private ChooseCharacter _chooseCharacter;
+        [SerializeField] private PlayerData _playerData;
 
         [Header("Prefabs")]
         [SerializeField] private GameObject _playerPrefab;
@@ -19,7 +18,7 @@ namespace RogueLike.Game
 
         private void Awake()
         {
-            SetPlayer(_chooseCharacter._playerPrefab);
+            SetPlayer(_playerData.PlayerPrefab);
         }
 
         public void SpawnPlayer(Room.Room room)

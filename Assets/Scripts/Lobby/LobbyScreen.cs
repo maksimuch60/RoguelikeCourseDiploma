@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace RogueLike
 {
-    public class LobbyScreen : MonoBehaviour
+    public class LobbyScreen : BaseScreen
     {
         [SerializeField] private ChooseCharacter _chooseCharacter;
 

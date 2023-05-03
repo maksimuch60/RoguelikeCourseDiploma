@@ -3648,7 +3648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d1f977d8cc43b9acd3d04209346d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 4783201294106756877, guid: 5038ca6f5ecd4934698c4e0a0d8d6458, type: 3}
+  _playerData: {fileID: 11400000, guid: ef7d934940956c5419779f627fe4d241, type: 2}
+  _playerPrefab: {fileID: 0}
   _enemyPrefabs:
   - {fileID: 7735447049408960303, guid: 86acb8702f144994fa1246abfeeb3791, type: 3}
   - {fileID: 8296592599847588908, guid: 5588a20db9098f94696e5900fec62121, type: 3}
