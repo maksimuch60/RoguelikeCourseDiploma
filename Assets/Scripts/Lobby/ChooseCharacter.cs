@@ -1,34 +1,32 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace RogueLike
+namespace RogueLike.Lobby
 {
     public class ChooseCharacter : MonoBehaviour
     {
         [SerializeField] private PlayerData _playerData;
-        [HideInInspector]
-        public GameObject _playerPrefab;
         [Header("Player Prefabs")]
         [SerializeField] private GameObject _firstPlayer;
         [SerializeField] private GameObject _secondPlayer;
+        
         private int _sceneIndex = 2;
 
         public void TakeSoldier()
         {
-            SetPlayerSO(_firstPlayer);
+            SetPlayerSettings(_firstPlayer);
             MoveToNextScene();
         }
 
         public void TakeStormtrooper()
         {
-            SetPlayerSO(_secondPlayer);
+            SetPlayerSettings(_secondPlayer);
             MoveToNextScene();
         }
 
-        private void SetPlayerSO(GameObject playerPrefab)
+        private void SetPlayerSettings(GameObject playerPrefab)
         {
             _playerData.PlayerPrefab = playerPrefab;
-            _playerPrefab = _playerData.PlayerPrefab;
         }
 
         private void MoveToNextScene()
